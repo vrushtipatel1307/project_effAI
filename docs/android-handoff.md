@@ -1,75 +1,55 @@
-# Android handoff: CPU replication
+# Reproduce the Android CPU experiment
 
-This handoff is for the teammate who will measure the second device. It is an execution guide, not evidence that Android has been tested. Record the phone's model, SoC, RAM, Android build, battery condition, storage path, and available sensors before deciding whether a configuration fits.
+Run commands from the repository root on a Mac with Android SDK platform-tools, NDK, CMake, Python, Git, and curl. Enable USB debugging and authorize the connected phone. The runner expects ADB at `$HOME/Library/Android/sdk/platform-tools/adb`; `--target USB` selects one attached USB device. Use the verified [device inventory and limits](android-device.md) before interpreting results.
 
-## 1. Freeze and identify the device
+## Build and transfer
 
-On the Mac, note the repository commit and hashes for `configs/study.json`, `configs/models.json`, `prompts/corpus-v1.txt`, and the pinned runtime binary. On the phone, save:
-
-```sh
-adb devices -l
-adb shell getprop ro.product.manufacturer
-adb shell getprop ro.product.model
-adb shell getprop ro.soc.model
-adb shell getprop ro.build.version.release
-adb shell getprop ro.build.fingerprint
-adb shell cat /proc/meminfo
-adb shell dumpsys battery
-adb shell dumpsys thermalservice
-```
-
-Keep the complete outputs, including unavailable or permission-denied fields. Verify physical RAM from a trustworthy device source if the system does not report it. Record room conditions, screen state, battery percentage, charging state, foreground apps, and whether the phone is attached to a charger. Do not describe the user's earlier 6-8 GB estimate as verified hardware data.
-
-## 2. Build the pinned ARM64 CPU runtime
-
-Install/use the Android NDK already available on the Mac; record its version and path. Then:
+Download/check all four model files and extract the pinned llama.cpp source. `build_runtime.sh` also builds the Mac runtime. The recorded phone supports dotprod/FP16; use `armv8-a` for devices without those verified CPU features and label their results separately.
 
 ```sh
+python3 scripts/fetch_models.py
+sh scripts/build_runtime.sh
 export ANDROID_NDK="$HOME/Library/Android/sdk/ndk/<installed-version>"
+export EFFAI_ANDROID_CPU_ARCH='armv8.2-a+dotprod+fp16'
+export EFFAI_ANDROID_BUILD_DIR="$HOME/.cache/effai/runtime/llama.cpp-79967ec596c0dacfd2251b085a57e79df292b1cc/build-android-dotprod"
 sh scripts/build_android.sh
+
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+binary_sha=$(shasum -a 256 "$EFFAI_ANDROID_BUILD_DIR/bin/llama-server" | cut -d ' ' -f 1)
+binary_name="llama-server-cpu-$(printf '%s' "$binary_sha" | cut -c 1-8)"
+adb -d shell mkdir -p /data/local/tmp/effai
+adb -d push "$EFFAI_ANDROID_BUILD_DIR/bin/llama-server" "/data/local/tmp/effai/$binary_name"
+adb -d shell chmod 755 "/data/local/tmp/effai/$binary_name"
+for model in "$HOME"/.cache/effai/models/*.gguf; do
+  adb -d push "$model" /data/local/tmp/effai/
+done
+adb -d shell "cd /data/local/tmp/effai && sha256sum $binary_name *.gguf"
 ```
 
-The script builds ARM64 CPU-only `llama-server`, `llama-bench`, and `llama-perplexity` from the pinned source with Vulkan, OpenMP, BLAS, and Metal disabled. It requests static project libraries and the static C++ runtime so the transferred server does not depend on unshipped llama.cpp shared libraries. Record the NDK version, build log, CMake cache, and SHA-256 of each binary. A successful cross-build is not a phone runtime validation.
+Compare device model hashes with `configs/models.json` and the binary hash with `binary_sha`. The historical selected binary had SHA-256 `c80a55ba73c0ef7154e7a53af3979052b144d7c2295ab4ca3884a678b66d4efa`; a different compiler may change it. Use the content-addressed name of your own build throughout a new session. Record NDK revision, build logs, and CMake cache; the retained historical logs used NDK r27-beta1. Confirm CPU/F16 startup settings in the logs, rather than inferring them from the build command.
 
-## 3. Transfer runtime and one model
-
-Download the official model files on the Mac and verify all manifest SHA-256 values with `python3 scripts/fetch_models.py`. Copy the chosen binary and model to a shell-readable temporary directory on the device. Start with the largest pilot: Qwen2.5-1.5B Q8_0, 2,048 input tokens, and 512 generated tokens.
+## Validate monitoring and the largest workload
 
 ```sh
-adb shell mkdir -p /data/local/tmp/effai
-adb shell getprop ro.product.cpu.abi
-adb push "$HOME/.cache/effai/runtime/llama.cpp-79967ec596c0dacfd2251b085a57e79df292b1cc/build-android-cpu/bin/llama-server" /data/local/tmp/effai/
-adb push "$HOME/.cache/effai/models/qwen2.5-1.5b-instruct-q8_0.gguf" /data/local/tmp/effai/
-adb shell chmod 755 /data/local/tmp/effai/llama-server
-adb shell sha256sum /data/local/tmp/effai/llama-server /data/local/tmp/effai/qwen2.5-1.5b-instruct-q8_0.gguf
-adb forward tcp:8088 tcp:8088
+python3 scripts/run_android_study.py --target USB --binary "$binary_name" \
+  --session android-NEW-smoke --stage smoke
+python3 analysis/analyze_android.py --session android-NEW-smoke
+python3 scripts/run_android_study.py --target USB --binary "$binary_name" \
+  --session android-NEW-pilot --stage pilot --minimum-battery 15
 ```
 
-Start the server in a retained `adb shell` or terminal session:
+The smoke is instrumentation only. The pilot measures a fresh idle reference, then attempts two largest-condition repetitions with strict gates. It can stop or wait when thermal conditions fail; this is evidence, not a completed repeated pilot. For an exploratory matrix, the runner requires a saved successful largest-condition auxiliary warm-up with exact 2,048/512 counts, matching runtime/model/corpus hashes, and a valid idle reference. Inspect `results/android-NEW-pilot/` before proceeding. Preserve failures and do not bypass gates or reuse another binary's warm-up.
+
+## Run the 24-case exploratory matrix
 
 ```sh
-adb shell '/data/local/tmp/effai/llama-server -m /data/local/tmp/effai/qwen2.5-1.5b-instruct-q8_0.gguf -c 3072 -t 4 -tb 4 -b 512 -ub 128 -ngl 0 -np 1 -fa on -ctk f16 -ctv f16 --host 127.0.0.1 --port 8088 --no-webui'
+python3 scripts/run_android_study.py --target USB --binary "$binary_name" \
+  --session android-NEW-presentation --stage presentation --minimum-battery 15 \
+  --pilot-session android-NEW-pilot --idle-reference-session android-NEW-pilot
+python3 analysis/analyze_android.py --session android-NEW-presentation
+python3 analysis/compare_devices.py --android-session android-NEW-presentation
 ```
 
-Save the entire startup log. Confirm the loaded model, context size, CPU backend, and zero accelerator layers in the runtime output. Do not infer CPU use from the command alone. Confirm the host-side forwarded `/health` endpoint responds before sending prompts.
+The final command compares against the saved Mac session by default; add `--mac-session mac-NEW-presentation` after analyzing your own matching Mac run. Exploratory runs use bounded thermal observations, one warm-up per loaded model block, one observation per configuration, and no SD or stabilization claim. Keep the screen off and record charging, ambient conditions, background load, available sensors, and all failures. Android inference energy remains unavailable without independently validated measurement.
 
-## 4. Validate the largest case before a matrix
-
-Monitor process RSS and device free memory before, during, and after the largest case. Record `adb shell dumpsys meminfo <pid>`, `/proc/meminfo`, `dumpsys thermalservice`, and available battery temperature at consistent timestamps. Android may hide or virtualize counters; label unavailable data as unavailable. Capture process exit status, OOM evidence, logcat entries, throttling/thermal state, and whether the server remained responsive. Do not claim the phone supports the matrix based only on weight file size or a short startup smoke test.
-
-For a single presentation-pilot request from the Mac, use a fresh unique run directory:
-
-```sh
-python3 scripts/record_request.py --url http://127.0.0.1:8088 \
-  --input 2048 --output 512 \
-  --run-dir results/android-pilot-<device>-largest \
-  --label android-qwen15-q8-i2048-o512
-```
-
-This recorder preserves the exact prompt tokens, request, SSE stream, output count, stop reason, runtime timings, and client arrival proxies. It does not collect Android memory or thermal evidence. Attach a timestamped device-monitor log and server log. If any exact-count, context, or backend check fails, preserve the failure and do not schedule a full sweep.
-
-## 5. Execute and return evidence
-
-If the user-approved immediate presentation scope remains one measurement per configuration, execute the 24 main configurations once, with four randomized model/quantization blocks and six randomized configurations per block, one warm-up per loaded model, one request at a time, and F16 KV cache. The team may later run the complete protocol from `configs/study.json`: largest pilot first, then one warm-up plus three measured requests/configuration, randomized configuration blocks, at least 120 seconds between repeated configurations, and the strict thermal gate. Do not mix exploratory and controlled sessions or calculate SD from one observation.
-
-For every run return a unique ID, exact config, prompt/request/stream files, server log, binary/model hashes, timestamps, process-memory samples, thermal/charge evidence, outcome or failure reason, and sensor-availability notes. Preserve originals. Return a compressed evidence bundle excluding model weights and credentials; include hashes for every returned file. Do not compare phone USB input energy with Mac component estimates unless the energy boundary is made comparable. No decode J/token without decode-phase-isolated energy.
+For the separate controlled protocol, `--stage full --pilot-session android-NEW-pilot` requires two successful largest-condition pilot records and matching provenance, and retains strict gates and repeat spacing. This is future work, not the published experiment. The raw frozen session sources preserve historical execution; current entry points are under `scripts/`. Never overwrite the published sessions when reproducing measurements.

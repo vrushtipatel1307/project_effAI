@@ -21,44 +21,15 @@ Inspection date: 2026-11-15. User identifies the phone as a **realme C61**. Wire
 
 Read-only inventory: [device-inspection.txt](../results/android-readiness-20261115/device-inspection.txt). Runtime build/checksum evidence: [setup](../results/android-20261115-setup/). A successful build or device inventory does not establish the full matrix's fit.
 
-## First validated real workload
-
-`android-20261115-smoke-v3` completed Qwen2.5-0.5B Q4_K_M with 256 formatted input tokens and 128 forced output tokens. Independent audit confirms exact prompt/request/output counts, limit stop, no truncation, no cache reuse, runtime rate denominators, and CPU/F16/context startup logs. It is **instrumentation smoke only**, with no strict stabilization claim and no main-matrix observation.
-
-Measured runtime prefill: 11.99913 s / 21.33488 tokens/s; decode: 16.584655 s / 7.71798 tokens/s. Request sample peak RSS: 573,648 KiB (560.2 MiB); peak HAL SoC temperature: 70.414°C. Do not generalize this single small case to the largest condition.
-
 ## Selected CPU build and largest-case status
 
 The generic ARMv8-a largest-case warm-up completed 2,048 input / 512 output tokens with all exact-count/cache/context/stop checks passing (543.08 s, decode 2.7985 tokens/s). It is not a measured main observation. The phone reports `asimddp`, `fphp`, and `asimdhp`; a separate `armv8.2-a+dotprod+fp16` build has passed a small real-prompt smoke and startup logs confirm `DOTPROD=1` and `FP16_VA=1`. Main results must use one consistent validated build; do not pool generic and optimized observations.
 
 The optimized binary is `llama-server-cpu-c80a55ba`, SHA-256 `c80a55ba73c0ef7154e7a53af3979052b144d7c2295ab4ca3884a678b66d4efa`. A largest-condition selected-build warm-up completed before the presentation matrix. The full controlled pilot remains a future requirement; the presentation matrix did not claim strict stabilization.
 
-## Autonomous experiment commands
+## Reproduction
 
-The current operator is authorized to control the phone and execute tests. Keep the phone powered and wireless debugging connected. The runner turns the screen off, retains stock CPU/thermal policies, records the charging boundary, and serializes experiments with a lock.
-
-```sh
-# Resolve the connected authorized target first; do not publish its identifier.
-python3 scripts/run_android_study.py --target '<ADB target>' \
-  --session android-YYYYMMDD-smoke --stage smoke
-
-# Current user-approved starting guard is 14% while charging.
-python3 scripts/run_android_study.py --target '<ADB target>' \
-  --session android-20261115-pilot-dotprod --stage pilot --minimum-battery 14 \
-  --binary llama-server-cpu-c80a55ba \
-  --idle-reference-session android-20261115-pilot-v2
-
-python3 scripts/run_android_study.py --target '<ADB target>' \
-  --session android-20261115-controlled --stage full --minimum-battery 14 \
-  --pilot-session android-20261115-pilot-dotprod \
-  --binary llama-server-cpu-c80a55ba
-
-python3 analysis/analyze_android.py --session android-20261115-controlled
-```
-
-Pilot and full stages require a 60-second current-HAL window with range at most 1°C, mean at most idle+2°C, nominal thermal status, low mean aggregate CPU activity, fresh samples, battery at least the frozen starting threshold (user-approved 14% for the current session), and at least 120 seconds between repeated configurations. No platform CPU-power idle threshold can be asserted because a trustworthy Android power source is unavailable; this adaptation is frozen explicitly. Operator abort thresholds are recorded as operator policy, not manufacturer thermal ratings. Missing sensors or gate failures remain evidence and do not silently become controlled results.
-
-The full controlled pilot is the largest case twice: Qwen2.5-1.5B Q8_0, 2,048 input and 512 output tokens, F16 KV, 3,072 context capacity. The full main study requires 72 measured requests across 24 configurations, with warm-ups. Paired monitoring-overhead and focused KV-cache runs remain separately labeled. Perplexity and native-function/operator profiling are separate diagnostic/quality work.
+See [Android execution instructions](android-handoff.md). The selected-build largest warm-up and inherited idle baseline are retained in `results/android-20261115-pilot-dotprod/` and `results/android-20261115-pilot-v2/`; these are diagnostic provenance, excluded from the headline 24 main observations. Full controlled repeats require a successful two-repeat pilot and strict stabilization; the exploratory session does not satisfy that gate.
 
 ## Presentation matrix results — 2026-11-16
 
@@ -72,12 +43,6 @@ During the main session the phone was USB-powered and charging. Thermal status r
 
 Audited machine-readable results and plots: [Android summary and files](../analysis/android-20261115-presentation-usb/SUMMARY.md), [matched two-device comparison](../analysis/two-device-android-20261115-presentation-usb/COMPARISON.md), and raw evidence under `results/android-20261115-presentation-usb/`. The full repeated Mac and Android protocols, quality/perplexity, KV-cache comparison, profiler overhead, and validated power measurement remain pending.
 
-## Operational lessons
+## Runtime startup
 
-- Launch native binaries from `/data/local/tmp/effai`. Backend directory discovery from Android shell's default root cwd failed while trying to stat inaccessible `/init`; changing cwd resolved startup without a security change.
-- Build with explicit `GGML_NATIVE=OFF` and a recorded target CPU architecture rather than inheriting Apple host CPU assumptions. The script defaults to conservative `armv8-a`; this phone's selected build uses its verified `armv8.2-a+dotprod+fp16` features in a separate build directory. The installed NDK identifies itself as **r27-beta1**, not a final release; record the source.properties and complete CMake cache.
-- Use current HAL temperatures, not the older cached section of `dumpsys thermalservice`.
-- Perfetto v34 rejects `BATTERY_COUNTER_VOLTAGE`; a version-compatible config is retained. Feed config via stdin because its SELinux domain cannot open the shell-owned config file. Generic Rail1/Rail2/Rail3 readings alone do not validate physical energy measurement.
-- `simpleperf stat` succeeds for a shell child process. A real model profile still needs its own execution/validation; function samples are not an exact per-GGML-operator breakdown.
-
-Do not pool Android repeats with the existing exploratory Mac n=1 matrix or claim a symmetric controlled two-device study. Report, slides, and plots must use the final coverage audit rather than assuming every planned run completed.
+Launch from `/data/local/tmp/effai`; backend discovery from Android shell's root working directory failed on inaccessible `/init`. Use explicit `GGML_NATIVE=OFF` and the verified target CPU architecture. The historical NDK identified itself as r27-beta1; retained CMake/build logs identify compile options. Power counters, quality evaluation, and function/operator attribution have not been validated as study outcomes.

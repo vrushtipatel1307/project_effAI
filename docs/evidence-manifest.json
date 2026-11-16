@@ -1,191 +1,7 @@
 {
-  "scope": "Android raw sessions, diagnostics, derived analysis and reproduction sources; source bytes retained",
+  "schema_version": 1,
+  "boundary": "All retained raw evidence; analysis is regenerated separately. SHA-256 verifies consistency, not independent authenticity.",
   "files": [
-    {
-      "path": "MODEL_RECOMMENDATIONS.md",
-      "bytes": 17124,
-      "sha256": "301e81ee2023c0798cea0c33d967065655bf99ad440a0e4a71588cde0cceb277"
-    },
-    {
-      "path": "PROJECT_PROPOSAL.md",
-      "bytes": 7177,
-      "sha256": "ed67b0894f8466693bc6d16306cdd8fe1403d000216e1d16269213b9f129b298"
-    },
-    {
-      "path": "analysis/analyze_android.py",
-      "bytes": 18594,
-      "sha256": "89fb67969f6031b31c2ec23e1d71116d6b07294289eddb6e0575bec6263324b4"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/SUMMARY.md",
-      "bytes": 1715,
-      "sha256": "ca826ce415326d0da38941a02248220472e7c2ad1d4ca35727921fb9228de283"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/aggregates.csv",
-      "bytes": 6408,
-      "sha256": "c7b45fe4229e68f38cf85230e72f3fedbace61741309a42a543913a28621b493"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/aggregates.json",
-      "bytes": 27680,
-      "sha256": "b9125230c48e6a746422a049344845781a9ed864563c981d91ded3133361268a"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/audit.json",
-      "bytes": 3963,
-      "sha256": "05cd1cf419cd9f50c5c83c0500604932dffe86de8dcd6f7fc0125ad502ccada9"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/decode_throughput.png",
-      "bytes": 239185,
-      "sha256": "0274f0bd19f8c7b734d8b22346a999f5bcbf7fa7ff35d9c820725cb93757e7e2"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/kv_comparison.json",
-      "bytes": 1149,
-      "sha256": "628ad6211b93680c9d803913d6628fec8b66859370c56316f56b837105cd3f57"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/latency_memory_thermal.png",
-      "bytes": 256488,
-      "sha256": "5296f97e4466799ebd7f1990e530fd4a4cd926be0c38795990631b66956bbafa"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/session_telemetry.png",
-      "bytes": 241303,
-      "sha256": "47dcea524bc2447eccc8957aaa40e1820ca1fc2967963300bcac925034be9849"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/validated_runs.csv",
-      "bytes": 9201,
-      "sha256": "7ab20fcf1bed9e4d4c4a66ec137dd8fffe8098d94bc5a506a7323ea980090568"
-    },
-    {
-      "path": "analysis/android-20261115-presentation-usb/validated_runs.json",
-      "bytes": 25679,
-      "sha256": "b33f82a67b28fbd8f14dbe7e6201ee18a2e521d729ee1b7ec7373a78c6c5001c"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/SUMMARY.md",
-      "bytes": 1218,
-      "sha256": "90311a13e298d7b127eb5db3a5cb00bfb0a19170ce56686955443aebdd96d371"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/aggregates.json",
-      "bytes": 3,
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/audit.json",
-      "bytes": 3370,
-      "sha256": "e815d785f489a670ed0641add3dd1761b59ff19236bee8524a5769b0c98817bf"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/kv_comparison.json",
-      "bytes": 3,
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/session_telemetry.png",
-      "bytes": 123367,
-      "sha256": "28beb855a43ff19495c253841449c3e9de0267bfc7dc9f34be68c61bd61f1093"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/validated_runs.csv",
-      "bytes": 732,
-      "sha256": "ba69bca6dddfe8dd616bb23f39a79580792aceb70d1dc445197781fce5d99de1"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-dotprod/validated_runs.json",
-      "bytes": 925,
-      "sha256": "16f466d146926d90e3f5f2e465964a9eac247d10d536b07de5801288048bd323"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/SUMMARY.md",
-      "bytes": 1213,
-      "sha256": "dd295058be7b9219c5f1c0a1754b35bf5e116d5e7ef7027129117e68bbd07373"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/aggregates.json",
-      "bytes": 3,
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/audit.json",
-      "bytes": 2547,
-      "sha256": "a5a1d3301c56e60d0f048cb796fa75a6a928ffba7356b143c26107fbfd596197"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/kv_comparison.json",
-      "bytes": 3,
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/session_telemetry.png",
-      "bytes": 134312,
-      "sha256": "f5923aa9ee1375589710164375fe385bc9c09c8eba022254bae9be45321c8f73"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/validated_runs.csv",
-      "bytes": 725,
-      "sha256": "a370fb34b8ffd7af0d98eaa772eef4a85ebb2ed5545ee9f4e234cd4b7ccb1ece"
-    },
-    {
-      "path": "analysis/android-20261115-smoke-v3/validated_runs.json",
-      "bytes": 918,
-      "sha256": "c87944b21ac80feb12d4986c68e912f4fb5d77b54c7e81e60ef93f59af625793"
-    },
-    {
-      "path": "analysis/compare_devices.py",
-      "bytes": 7141,
-      "sha256": "f35924f0ba7944f566deac78a58172e25df32423caeaa4476f7e495b303e630b"
-    },
-    {
-      "path": "analysis/two-device-android-20261115-presentation-usb/COMPARISON.md",
-      "bytes": 2283,
-      "sha256": "00d2a630fef4e91793385f396aa22176a7d371f4bff56e24f55f55bc5040751a"
-    },
-    {
-      "path": "analysis/two-device-android-20261115-presentation-usb/audit.json",
-      "bytes": 1158,
-      "sha256": "a49ff043f11da7681c320b402ac9ab6e7f698759bb73960cc2921dd512321451"
-    },
-    {
-      "path": "analysis/two-device-android-20261115-presentation-usb/largest_condition_comparison.png",
-      "bytes": 87460,
-      "sha256": "0d23184f3a3d814d127938d8a5ff51dee6165f64730628736c181520c7bc1395"
-    },
-    {
-      "path": "analysis/two-device-android-20261115-presentation-usb/matched_observations.csv",
-      "bytes": 10192,
-      "sha256": "8dafa996ff686a4bdc7a70c140f49a77d5a327339fb115f604266c94fa81a990"
-    },
-    {
-      "path": "analysis/two-device-android-20261115-presentation-usb/matched_observations.json",
-      "bytes": 24675,
-      "sha256": "a48c5617bece16ba8e1e8dca70a0910ffcce7426227b24a3b2bbbff4886cb45d"
-    },
-    {
-      "path": "configs/android-presentation-pilot.json",
-      "bytes": 2821,
-      "sha256": "eb7e89afe25e6bbbef8e28d26fadd4bc74b540700493b36b0bdba406e56ff476"
-    },
-    {
-      "path": "docs/android-device.md",
-      "bytes": 10056,
-      "sha256": "74ac52f0dccb5fe0b5f55fa145667a2eba89b5a3e86ea45bd88ae209d060e076"
-    },
-    {
-      "path": "docs/protocol.md",
-      "bytes": 7391,
-      "sha256": "e45c3bf65fc9edef9172eea95d0d786f4771c147433b5593d85ebf6118b84b17"
-    },
-    {
-      "path": "requirements.txt",
-      "bytes": 99,
-      "sha256": "410b42b2f2015377ca083daf5c5699717106b613c44f373269ed1ad9bd655f85"
-    },
     {
       "path": "results/android-20261115-pilot-dotprod/core-harness.py",
       "bytes": 24664,
@@ -405,51 +221,6 @@
       "path": "results/android-20261115-pilot-v2/summary.jsonl",
       "bytes": 4059,
       "sha256": "006c064ebd37fb0cff1790fc53cde648f83422ef012be8647471882dd45bd6c1"
-    },
-    {
-      "path": "results/android-20261115-pilot/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-pilot/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-pilot/harness.py",
-      "bytes": 24852,
-      "sha256": "d2cc013355b28593c0c5ef26ac0ee8d025947e6c3c78a804a720d4d6035d906c"
-    },
-    {
-      "path": "results/android-20261115-pilot/idle-stabilization.json",
-      "bytes": 58272,
-      "sha256": "685942c80fa8b09316a5c694f98b045e34fcdb09a1ee3d8ea5e851d5218fdcca"
-    },
-    {
-      "path": "results/android-20261115-pilot/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-pilot/platform-adaptation.json",
-      "bytes": 1129,
-      "sha256": "7dc8cea7d4975ccffaf31eab9813c8500ca4f004b9da7a010702fd5ef2cc86cf"
-    },
-    {
-      "path": "results/android-20261115-pilot/provenance.json",
-      "bytes": 2255,
-      "sha256": "75556ce450b9d421cf304fb4ad96f5f16eb2a16dd5d5c76f5877e705f6161a9f"
-    },
-    {
-      "path": "results/android-20261115-pilot/sensors.jsonl",
-      "bytes": 2138120,
-      "sha256": "a9f450241f04f78a79daeae9486606e45bef73265c2245c6b943720df09a5c5a"
-    },
-    {
-      "path": "results/android-20261115-pilot/study.json",
-      "bytes": 2001,
-      "sha256": "0209c45ad4c9af9110cc2f6ce6035102d510ee9b33857bf8b84f5a4b84515c6c"
     },
     {
       "path": "results/android-20261115-presentation-usb/core-harness.py",
@@ -1237,136 +1008,6 @@
       "sha256": "527aaa16e911c26cba50a5cfc7d506086533fa7690aa98b8d036e59b04a4d984"
     },
     {
-      "path": "results/android-20261115-presentation/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-presentation/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-presentation/harness.py",
-      "bytes": 32834,
-      "sha256": "bb09bbe0a5229a442e2b65d6eaef9b9e81fa60184836d3925bde428e67cff509"
-    },
-    {
-      "path": "results/android-20261115-presentation/idle-baseline.json",
-      "bytes": 213,
-      "sha256": "f648b0f5c2e2861d0d4e50fc691f6d5f3d39d0491d959cddbdc48a9babbdcee9"
-    },
-    {
-      "path": "results/android-20261115-presentation/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-presentation/plan.json",
-      "bytes": 6371,
-      "sha256": "a26e04df3522fbf238cab892caf69f57dfb5124df0ea92bf6f9ad3b4a1a8e3dd"
-    },
-    {
-      "path": "results/android-20261115-presentation/platform-adaptation.json",
-      "bytes": 1541,
-      "sha256": "fc04681ab2b1d1f0566a11863d4af07de4bb2cfab9a16fe5f05567a281722859"
-    },
-    {
-      "path": "results/android-20261115-presentation/progress.json",
-      "bytes": 180,
-      "sha256": "2382da7388e718652dfdf6d6c697fdc2a28fd21da5a076b7c292a351cf652657"
-    },
-    {
-      "path": "results/android-20261115-presentation/provenance.json",
-      "bytes": 2681,
-      "sha256": "d358736589115878900ccc7bfb959f1e981fff50dfd8047822d9293023444a26"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/auxiliary-warmup-stream.jsonl",
-      "bytes": 76487,
-      "sha256": "b6039c5db05c80199f462ef935deb24d9ee54e534e154d358cfc97e55bdfec3b"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/preload-gate.json",
-      "bytes": 4301,
-      "sha256": "709c45ec4596543318ec074f7b31a97ecc0c87b71250f95aad84bc1e461f2bbe"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/prompt.json",
-      "bytes": 4352,
-      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/request.json",
-      "bytes": 2706,
-      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/result.json",
-      "bytes": 2787,
-      "sha256": "598ac4163cf4ed2b61e9f8857369aa8bf74a3aba7d3daaaf1251432a6487b03e"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/server-props.json",
-      "bytes": 4427,
-      "sha256": "f63c4def9f24af0d7beb3b70052093bba2d69f5db7fb91150418fb0ed8b141de"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt1/server.txt",
-      "bytes": 12670,
-      "sha256": "eb629da69003138b965052e174582f39339cb1034c15f575f29acb29b02a73e9"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/auxiliary-warmup-stream.jsonl",
-      "bytes": 206,
-      "sha256": "f6d6eeeb0351795993e1a1066dc1a25b864ee77966ca0b3b892346226d1f436a"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/preload-gate.json",
-      "bytes": 4266,
-      "sha256": "f3fee30a30492d2eec04c0918b3b612ad99c6297c0c68453cc3d4de56bdb1f91"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/prompt.json",
-      "bytes": 4352,
-      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/request.json",
-      "bytes": 2706,
-      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/result.json",
-      "bytes": 4501,
-      "sha256": "1f1c27bc1c488f7fbb084bc079578db69c38279a7ccff355e9dab9c7e4795d46"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/server-props.json",
-      "bytes": 4427,
-      "sha256": "f63c4def9f24af0d7beb3b70052093bba2d69f5db7fb91150418fb0ed8b141de"
-    },
-    {
-      "path": "results/android-20261115-presentation/runs/presentation-qwen15_q8-i256-o512-attempt2/server.txt",
-      "bytes": 12950,
-      "sha256": "f8341137e0a8c356b58c156c65e330af59a1178597aa635a35fcbcb313dc2601"
-    },
-    {
-      "path": "results/android-20261115-presentation/sensors.jsonl",
-      "bytes": 961992,
-      "sha256": "fb4647533e1d374ee19aca311259233a2388e38d9b980b239276f8020dade182"
-    },
-    {
-      "path": "results/android-20261115-presentation/study.json",
-      "bytes": 2753,
-      "sha256": "f404d79154c84de9e959205f46e3d9da685e9f6901222a2b3ef0d4d6cdaa91b4"
-    },
-    {
-      "path": "results/android-20261115-presentation/summary.jsonl",
-      "bytes": 6636,
-      "sha256": "314be82fe39ec9d4fe1a9daf38a05cb5481747bb376548018ce01691dd61e443"
-    },
-    {
       "path": "results/android-20261115-setup/CMakeCache-dotprod.txt",
       "bytes": 30968,
       "sha256": "65956530da8300982ab493abf4ac84ff934a961a62730ee351b6924e06602b90"
@@ -1412,509 +1053,939 @@
       "sha256": "f1e4f7399ad310dda23bd14cd28fbdfeff926b34191148124fda7a038f784861"
     },
     {
-      "path": "results/android-20261115-setup/first-device-match-audit.txt",
-      "bytes": 2694,
-      "sha256": "4edd13bc55b600786ab679ec73c871e8db5e05d396a121094b3069e7a0f2f61c"
-    },
-    {
-      "path": "results/android-20261115-setup/first-usb-run-audit-console.txt",
-      "bytes": 2070,
-      "sha256": "4923a071ba5c8f0b799eb5a76c9caf8bebd597fa11e86956255b343b0362f22e"
-    },
-    {
-      "path": "results/android-20261115-setup/new-runtime-version.txt",
-      "bytes": 92,
-      "sha256": "ae855ecdde21618a023aad830b11e5c6ccf836d5ab20d0b7ba45919ac58db177"
-    },
-    {
-      "path": "results/android-20261115-setup/operations-notes.md",
-      "bytes": 2744,
-      "sha256": "7f3added933c9327ddcee3aadda4fc668c8823fef3df2fb6e1813115b4f0c5d2"
-    },
-    {
-      "path": "results/android-20261115-setup/pilot-console.txt",
-      "bytes": 9496,
-      "sha256": "411e744aa8adb000052e98d6fb768da34a5268381318c6677995fed24d383683"
-    },
-    {
-      "path": "results/android-20261115-setup/pilot-dotprod-console.txt",
-      "bytes": 7722,
-      "sha256": "ffa3f0cd69fddfc031d262c58ee547e0279a947656d5969fbe3b6c51dff8727c"
-    },
-    {
-      "path": "results/android-20261115-setup/pilot-v2-console.txt",
-      "bytes": 3606,
-      "sha256": "76c0acdc96954d7d3d59b4f8fc819e8c676157292bc809d6d3aee518d8178279"
-    },
-    {
-      "path": "results/android-20261115-setup/power-counters-validated.csv",
-      "bytes": 393,
-      "sha256": "934df18f526ec2b37b0ae5bbdb930f421e206b634b9e7274b241851fa732c153"
-    },
-    {
-      "path": "results/android-20261115-setup/power-counters.csv",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe-console.txt",
-      "bytes": 120,
-      "sha256": "ab82f46308a1cc9cfc178ba369e21964c189398f1aa61fbdbf35672661ec6e75"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe-stdin-console.txt",
-      "bytes": 285,
-      "sha256": "137ce1f5daa1701d9354980c53958ff7c0530a461287e0f27403d1338efe6b87"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe-v34-console.txt",
-      "bytes": 432,
-      "sha256": "9f09e851a0cfe58d30427f475e4b44928501f53f24f5580ffadf8c98bf6f5649"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe-v34.pbtxt",
-      "bytes": 394,
-      "sha256": "7fe1b0c3cb7062cf9f98fdfab0bdfd3f09a8ac45bbfbf8549e3b1e15da7439a2"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe.pbtxt",
-      "bytes": 394,
-      "sha256": "480fce2e1c66522a03a5975645cd697a8b758c98a923c1da208249861ce0a45f"
-    },
-    {
-      "path": "results/android-20261115-setup/power-probe.pftrace",
-      "bytes": 8355,
-      "sha256": "837c884ea189545f0ccf8baf86d13874294d2990e1226aa608e42226c28f6338"
-    },
-    {
-      "path": "results/android-20261115-setup/power-query-console.txt",
-      "bytes": 213,
-      "sha256": "0aa64cbc65296521b489f35a957d1623fcfb251a8c41c96a8895f3dbc50f6079"
-    },
-    {
-      "path": "results/android-20261115-setup/power-rail-increments.txt",
-      "bytes": 875,
-      "sha256": "c69138b10b44686b6a60f4839a8a124e842f12e25689ce60319ad7529e199746"
-    },
-    {
-      "path": "results/android-20261115-setup/power-rail-query-console.txt",
-      "bytes": 213,
-      "sha256": "0aa64cbc65296521b489f35a957d1623fcfb251a8c41c96a8895f3dbc50f6079"
-    },
-    {
-      "path": "results/android-20261115-setup/presentation-console.txt",
-      "bytes": 1320,
-      "sha256": "c8dd8fe1d19f9d7bd531bf3ee0894111cb0e656b8a24481ddc393a578cfca9d3"
-    },
-    {
-      "path": "results/android-20261115-setup/presentation-usb-console.txt",
-      "bytes": 5116,
-      "sha256": "8456d72d373820785a583be46a56a53825dffab2e914091638b5c341e11a2d0a"
-    },
-    {
-      "path": "results/android-20261115-setup/profiler-capabilities.txt",
-      "bytes": 133,
-      "sha256": "b2c50d7822b3e315eeb7c685ce20cc86b6ca0bf91c5991332f416648ad88c4f6"
-    },
-    {
-      "path": "results/android-20261115-setup/quality-corpus-download.txt",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "results/android-20261115-setup/quality-corpus-manifest.json",
-      "bytes": 770,
-      "sha256": "45e13f38f654112153ad05c0e011b1f5942cf20bf7878dfd9e44d9f36f3c1a66"
-    },
-    {
-      "path": "results/android-20261115-setup/simpleperf-stat-probe.txt",
-      "bytes": 156,
-      "sha256": "cbfe74b54cd7256d1fa4f11b72d73e72124e5e5f9f87c213324db2ddcde09b0f"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-console.txt",
-      "bytes": 2324,
-      "sha256": "b0db0767211c23bb7bfa61b696d36a324cc06d59efe2d34280f834184cfb4bfd"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-dotprod-console.txt",
-      "bytes": 819,
-      "sha256": "f2940a53822fb023cae663e7e91115cf17ba54622faf01db0319600fe5a61236"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-dotprod-independent-audit.txt",
-      "bytes": 1002,
-      "sha256": "2e201e5745d28da53cdaffb2d705e914da8fab90a4c45dc1867db0b9a8e3d52c"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-independent-audit-console.txt",
-      "bytes": 997,
-      "sha256": "d07be9bf9ab5c302a2d4008a67b3822f02771bfeb50012ca1b124ab1e48031d5"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-v2-console.txt",
-      "bytes": 3244,
-      "sha256": "70e52ffd6204b449a1f36bb221a094a2ee54c27d69462febd9b621beb436cad3"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-v3-console-retry.txt",
-      "bytes": 819,
-      "sha256": "212d8e0f134d48eee9ccffe038bedf7f9983e36424ffa6b0a7ec7e1d120e7cf7"
-    },
-    {
-      "path": "results/android-20261115-setup/smoke-v3-console.txt",
-      "bytes": 504,
-      "sha256": "4962649cadf2c0f3c2e9e1712865123922428ec5974bc40ca607a5dbcc4f7e40"
-    },
-    {
-      "path": "results/android-20261115-setup/trace-processor-console.txt",
-      "bytes": 228,
-      "sha256": "cd9d55e2ee1992abbc4e0c8a1492d8e27e5131ca7b6d300d387e35e1ce78c5a6"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/harness.py",
-      "bytes": 26571,
-      "sha256": "9e58acc3647a7d3a04955407cdfa0b94ec045cbef63c3e46ed2e798bbb1221e2"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/idle-baseline.json",
-      "bytes": 589,
-      "sha256": "6f4686d8ae52e84712ca0dfe4c921df48e0e9b2b3a38a8d50ff6f2ab2d887a6b"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/idle-stabilization.json",
-      "bytes": 2357,
-      "sha256": "194984082cd2b2ebcb812f7dfb26f1e725c11a2cd7087f397ba392ef246ab5d0"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/plan.json",
-      "bytes": 198,
-      "sha256": "a3b9e5572f91bb4d185a17e69fcaf2692d449e4e0d8a05d44f792acd695868ec"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/platform-adaptation.json",
-      "bytes": 1147,
-      "sha256": "bfa92897809e92965de1c55f42ad275379650429772f82582f9e6bec2e2ba462"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/progress.json",
-      "bytes": 163,
-      "sha256": "f160d7a90ddf6dc272a656fc14553feab7740b78bc36a91a80df14aa425c3887"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/provenance.json",
-      "bytes": 2273,
-      "sha256": "5d5f0fb666713f8611895efc134060262ddaf8f4e269a0ea5b49ef0a62c2c4cc"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/preload-gate.json",
-      "bytes": 605,
-      "sha256": "6e3c021db4ea861ba5930bae9e580ac785a26ec151dd14f23c52f8ba34377b7f"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/prompt.json",
-      "bytes": 4352,
-      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/request-gate.json",
-      "bytes": 605,
-      "sha256": "b40b46df915c21925672f19d9278a97453732ddf6c51d63dfbc3933111cd1574"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/request.json",
-      "bytes": 2706,
-      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/result.json",
-      "bytes": 16184,
-      "sha256": "572d08f54edfbf716cbb05e9052baae8076f48adf8cd5e86be8db7ee2271b5ff"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/server-props.json",
-      "bytes": 4429,
-      "sha256": "b322022cf422cdbd512eec58f080a89399780e4fd2e3cd8180332baba5ff71d7"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/server.txt",
-      "bytes": 13533,
-      "sha256": "286887acc15315034e9fe157f1c75936d4574b536da831171c6ceaec33084c94"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/state.json",
-      "bytes": 4660,
-      "sha256": "25585a649b3a9555be1093b12016bf393257d785bdbe1619263f64414aae776c"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/runs/smoke-qwen05_q4-i256-o128-attempt1/stream.jsonl",
-      "bytes": 30126,
-      "sha256": "f2994faa286dba184d4199c945e3ea75211dfd250011c669303e8b1b4661b45f"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/sensors.jsonl",
-      "bytes": 190107,
-      "sha256": "454fa7a599a6521941daa439795bc3d50af670078e73cc1af3decd9ee43c322f"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/study.json",
-      "bytes": 2001,
-      "sha256": "0209c45ad4c9af9110cc2f6ce6035102d510ee9b33857bf8b84f5a4b84515c6c"
-    },
-    {
-      "path": "results/android-20261115-smoke-dotprod/summary.jsonl",
-      "bytes": 13902,
-      "sha256": "b5eb3e8dcd55650dbbcde3bcb1076ef691a3ef36b81246d24d9297204ca6faba"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/harness.py",
-      "bytes": 23566,
-      "sha256": "bb57d6e26b60697d52e416de990ac61ce936d5fbd98a5be12b9d6d01319f85b3"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/idle-stabilization.json",
-      "bytes": 15113,
-      "sha256": "23ef735dc9d85010d0535b09f18cee2445a2329c106fca07266a14df5b16eb71"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/platform-adaptation.json",
-      "bytes": 726,
-      "sha256": "0d4a22f7f982fa3ae796c0a2896f783872cff629d7d9be1354938ef4a15c356b"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/provenance.json",
-      "bytes": 1368,
-      "sha256": "bee2a64b168cadabfefbd7d731633f2e5cd434741b141c66a53ce57cf1b58393"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/sensors.jsonl",
-      "bytes": 602004,
-      "sha256": "ff806ec246bc48a2f624d268a5212fda70c8b803c23d7d6c2a6fecc8520d4cd3"
-    },
-    {
-      "path": "results/android-20261115-smoke-v2/study.json",
-      "bytes": 2001,
-      "sha256": "0209c45ad4c9af9110cc2f6ce6035102d510ee9b33857bf8b84f5a4b84515c6c"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/harness.py",
-      "bytes": 24009,
-      "sha256": "1ee7dfce45f861cda6a86aba1043f58268e215ff1fcae38ab61f7bcee0157da7"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/idle-baseline.json",
-      "bytes": 554,
-      "sha256": "e2d2e94a4b2ff3bfd69441bbaa2438cef05b99cb928dfb9b51bfcf884abba286"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/idle-stabilization.json",
-      "bytes": 2361,
-      "sha256": "89a36a47fed4eebd556bc6a276321bdbe16c1b53d5319c8ac15e303e61b697c9"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/plan.json",
-      "bytes": 198,
-      "sha256": "a3b9e5572f91bb4d185a17e69fcaf2692d449e4e0d8a05d44f792acd695868ec"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/platform-adaptation.json",
-      "bytes": 835,
-      "sha256": "2fdff26755e9259649d8f93cfa55065da08bb0d066175b7974c39f128f435563"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/progress.json",
-      "bytes": 163,
-      "sha256": "f01fe5ad6d2d83ee8ef132106d7b1b153222be715d45100479811fcf6c709fdd"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/provenance.json",
-      "bytes": 1481,
-      "sha256": "c516e2aa32ff305d5f0ecbd6e1c520e2ac6b1d63e88e2fb1e19d8bd79724d723"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/preload-gate.json",
-      "bytes": 607,
-      "sha256": "d633d09e9ba2fd86202f23369b2058e3e1f60876d8efda5323df02a356bdf573"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/prompt.json",
-      "bytes": 4352,
-      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/request-gate.json",
-      "bytes": 609,
-      "sha256": "7052e3e401ef834de90595f599fb64f735e2ebda623dcc41de926bf4552a291a"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/request.json",
-      "bytes": 2706,
-      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/result.json",
-      "bytes": 16188,
-      "sha256": "b1599f8d844f6753eb60a7afa59f68e0daa3a6680ebad52eb30f205385013585"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/server-props.json",
-      "bytes": 4429,
-      "sha256": "b322022cf422cdbd512eec58f080a89399780e4fd2e3cd8180332baba5ff71d7"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/server.txt",
-      "bytes": 13397,
-      "sha256": "729c40196b2ff3345b00455013f9e82d50d52dcbe2b0c0c85bd7ac61fa9be3f9"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/state.json",
-      "bytes": 4667,
-      "sha256": "7701d8daafa465fa82eccda470c196f06f4ccba20aad930f18217f4a4a26d851"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/runs/smoke-qwen05_q4-i256-o128-attempt1/stream.jsonl",
-      "bytes": 30121,
-      "sha256": "917977ebde7edd12cc8dcb5ab5dd707b29e7fa989eea02ba11b2bfa2a8190a65"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/sensors.jsonl",
-      "bytes": 226545,
-      "sha256": "4cd99c796b72efd1c47c239e55b2b30d6e332181610a66522d41fad292364cb2"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/study.json",
-      "bytes": 2001,
-      "sha256": "0209c45ad4c9af9110cc2f6ce6035102d510ee9b33857bf8b84f5a4b84515c6c"
-    },
-    {
-      "path": "results/android-20261115-smoke-v3/summary.jsonl",
-      "bytes": 13906,
-      "sha256": "8327886218ebf5516234b57cc1f677de25c3d04387136f5491be0ca737031bd6"
-    },
-    {
-      "path": "results/android-20261115-smoke/core-harness.py",
-      "bytes": 24664,
-      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
-    },
-    {
-      "path": "results/android-20261115-smoke/corpus-v1.txt",
-      "bytes": 1216,
-      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
-    },
-    {
-      "path": "results/android-20261115-smoke/harness.py",
-      "bytes": 23168,
-      "sha256": "222f8956ed366b804cb7a455ddcc0e56dc2b7e604bfcbfb32bd0c2218d92c8f4"
-    },
-    {
-      "path": "results/android-20261115-smoke/idle-stabilization.json",
-      "bytes": 9489,
-      "sha256": "ba34ba8290156856254106b7815a00a72b6a725f324b148318bb1d89fc21a1d7"
-    },
-    {
-      "path": "results/android-20261115-smoke/models.json",
-      "bytes": 1985,
-      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
-    },
-    {
-      "path": "results/android-20261115-smoke/platform-adaptation.json",
-      "bytes": 726,
-      "sha256": "0d4a22f7f982fa3ae796c0a2896f783872cff629d7d9be1354938ef4a15c356b"
-    },
-    {
-      "path": "results/android-20261115-smoke/provenance.json",
-      "bytes": 1368,
-      "sha256": "7fd95393a594f326df809221129586dba86428f87cab63e12b1631b4ce306f5d"
-    },
-    {
-      "path": "results/android-20261115-smoke/sensors.jsonl",
-      "bytes": 386435,
-      "sha256": "090c7265bb5c8df970ccbf324d16e182d1ec0c76908208412624a7ef7e7ddc3f"
-    },
-    {
-      "path": "results/android-20261115-smoke/study.json",
-      "bytes": 2001,
-      "sha256": "0209c45ad4c9af9110cc2f6ce6035102d510ee9b33857bf8b84f5a4b84515c6c"
-    },
-    {
       "path": "results/android-readiness-20261115/device-inspection.txt",
       "bytes": 4985,
       "sha256": "46e732010fd7377db2e284813c6e128eb1f5eec9059523c737541f8887ed2c9e"
     },
     {
-      "path": "results/android-thermal-diagnostic-20261115/README.md",
-      "bytes": 1105,
-      "sha256": "dc30b8f0574dba33a5d518f386b99bf96f7569d4fd2faf9275ef7d04102b68dd"
+      "path": "results/mac-20261113-presentation-v2/console-full.txt",
+      "bytes": 4010,
+      "sha256": "217f33d1044fd3c097a3c05976743f7b2f2efc6a91a730bd4c4ba5db7000a8c4"
     },
     {
-      "path": "results/android-thermal-diagnostic-20261115/initial-window.json",
-      "bytes": 318330,
-      "sha256": "400fa7d2b09ecd05085e346ff050cbf7cd97dca1ebf8f15451275fd63766374f"
+      "path": "results/mac-20261113-presentation-v2/console.txt",
+      "bytes": 304,
+      "sha256": "68571e00732058fed3631add9a36b70923e566eb24440ccf713ec9a8b48bd3e1"
     },
     {
-      "path": "scripts/android_status.py",
-      "bytes": 2331,
-      "sha256": "f2b824fd1931f321c87b58063d342c1c27d9edc09a95ad967dde4068e654a0c1"
+      "path": "results/mac-20261113-presentation-v2/corpus-v1.txt",
+      "bytes": 1216,
+      "sha256": "b6b5c2d0f8f40d78442999995e5e5dad7dd241c375c586878e5fd35976389906"
     },
     {
-      "path": "scripts/build_android.sh",
-      "bytes": 1090,
-      "sha256": "f79304010d9f9c6ed6bf4d8ebc507559133aa45f5b6f511c42323f53993090ed"
+      "path": "results/mac-20261113-presentation-v2/harness.py",
+      "bytes": 24664,
+      "sha256": "fd49a0f755c968a53405318cb393956516811a5c1bb773366f13bc5ef80973d7"
     },
     {
-      "path": "scripts/fetch_quality_corpus.py",
-      "bytes": 1664,
-      "sha256": "06add7f183132d285ad078036e03975af98d28e5e20ddb1735a3fb1d65224d63"
+      "path": "results/mac-20261113-presentation-v2/idle-baseline.json",
+      "bytes": 456,
+      "sha256": "aa3b03df1fa6539bcc4d36af317c3fe063437bef04f7a8c63a8ca0dd1aa88bf5"
     },
     {
-      "path": "scripts/run_android_study.py",
-      "bytes": 33028,
-      "sha256": "82b7c61760fa05077cad573c3d4983385343270af17172ada214762550ea9fec"
+      "path": "results/mac-20261113-presentation-v2/idle-stabilization.json",
+      "bytes": 1871,
+      "sha256": "b1c436c2136be1a1cb2b684303db706f93c6535201fefa1ed38b8c35638f79ba"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/inventory.json",
+      "bytes": 32731,
+      "sha256": "fd66de9a548292a00340e18f3fd8a116a7ee1431a3bee99c3a25508ea519e564"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/models.json",
+      "bytes": 1985,
+      "sha256": "2e1c7e12dd08021419227363b6ad4a628f988087792a6b0592c5562d4d8dcdee"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/operations-notes.md",
+      "bytes": 2948,
+      "sha256": "cb8c356c9962a7d7b7dcc4688170671e838198e827bfb302fcf2e6d26800f157"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/plan.json",
+      "bytes": 6371,
+      "sha256": "a26e04df3522fbf238cab892caf69f57dfb5124df0ea92bf6f9ad3b4a1a8e3dd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/powermetrics-durable.txt",
+      "bytes": 3224664,
+      "sha256": "db1b609a12bd4244548f190a68acc53f0a376b23528df7424e87557146203d22"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/progress.json",
+      "bytes": 193,
+      "sha256": "73845335c628fd961f0125d293f326d55ab209ea50a573e9fb6d39d5a20ac36d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/provenance.json",
+      "bytes": 531,
+      "sha256": "f15412b6f37f0b480bc5aed2665f63d65bdb42d7703132e5bf5056a6e0e270fd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/memory.jsonl",
+      "bytes": 380,
+      "sha256": "fe7a624362d32863c9c82d3afcccd0636dec1bc811611a4a3e848ca9e4c97077"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "a3841a87544101ddd243ee7e90bc5f48b19ba81f4e99011862f8c9008f345bcb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/result.json",
+      "bytes": 60698,
+      "sha256": "156b6b207ecfccf11a481ad56608df9e4fdd28531af6fd34728e9c5cd8a66862"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/state.json",
+      "bytes": 45036,
+      "sha256": "6d7722e06aa0ada2d3427d2a8b9d0156d7dba44fb2e409138114554fd7697f08"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o128-attempt1/stream.jsonl",
+      "bytes": 34878,
+      "sha256": "6b694f9ed37e327d015550d7d46fa11ac522ba7a788b4c19a9d07e2ba2f5c912"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/auxiliary-warmup-stream.jsonl",
+      "bytes": 115098,
+      "sha256": "7614f6fee375f4bb95619b76f369efdb7bdbf5ccd02ce2934a9fcefbbf362083"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/auxiliary-warmup.json",
+      "bytes": 26198,
+      "sha256": "bdd1b08a52eec39a06855d23333309eb1c7a0088549b2efe7efa859af008add1"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/memory.jsonl",
+      "bytes": 763,
+      "sha256": "cb8c06e64cc5b50063143d1a85c1b66caab51bc1674382d67a6c5d9f24f4c88d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "01e67b8536d50edb0100f4ede71e8d74842a62d1a430d284d134104a438734c4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/result.json",
+      "bytes": 73665,
+      "sha256": "d768004cc60225f00215c842ff0b73df904f4cfb06148b6ca1d9d69e2b7af265"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/server.txt",
+      "bytes": 24275,
+      "sha256": "bd951b57fc6e4e50b4e5f3201a63f369351f8b5a0d708fbb23a2e24d96a4dcac"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/state.json",
+      "bytes": 45411,
+      "sha256": "abef5a330f89fd4ee8506777ebe31905b97f22e36b543a611ee78b8f58c2db65"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/stream.jsonl",
+      "bytes": 115111,
+      "sha256": "e321fcfbb2f244271ccb1e3938cf1f4d4fd8b152e17b21d3729cf61e2c4d54f5"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i1024-o512-attempt1/thermal-gate.json",
+      "bytes": 504,
+      "sha256": "f426b57739e1d1beff75ba8b8fcae49e1822964bc677baec512984cdbc479efa"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/memory.jsonl",
+      "bytes": 689,
+      "sha256": "5805ab2af732e1bced346c9c2141eea074cf5a6e7c1efc0f5bf62bddcb65c72f"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "b9f831636e3ed53e9052024998ffa74021a4747b8037eb6cfe85a55b96d90bcd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/result.json",
+      "bytes": 66900,
+      "sha256": "3c933de4b6135639e8959bfa4ccabe05edc36a66bf6ec3f16f09f96e6045754f"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/state.json",
+      "bytes": 45036,
+      "sha256": "c7920c78238030c41253d5b06279fe3b5c714785354fb25a5a13a49b0e5f7b10"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o128-attempt1/stream.jsonl",
+      "bytes": 41006,
+      "sha256": "2f1f22a649d85a093b8e2ca7d469252885a5d0360c2ceaf6dd08184f3fdbe522"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/memory.jsonl",
+      "bytes": 1224,
+      "sha256": "5b744d90627ea7f119cdeadd284336b964b50aa205f89a86dd8a161dba66b3c1"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "3f8209c6baaa75616247dc170451e82f4b73031a429625ca30cb429409a8af85"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/result.json",
+      "bytes": 79431,
+      "sha256": "7483c282575e2c707151ec817ac98f903509fcf77af5e81a1182f9e739647961"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/state.json",
+      "bytes": 45036,
+      "sha256": "d59081f745ce782a2801ad74c2f4fb07f5d75023a3b518dfbc71e0f8d49acf76"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i2048-o512-attempt1/stream.jsonl",
+      "bytes": 121451,
+      "sha256": "383ba43cb785ffada9605191378ea39108629cbeee5ce79447299665244a0d89"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/memory.jsonl",
+      "bytes": 152,
+      "sha256": "e8ad61b23173169de9caff0bb8fb3e67de67425ea27a0f7787ee05e2935d8112"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/result.json",
+      "bytes": 56042,
+      "sha256": "0b4e4c93a47b148c5a1f54a293c67a26bfc26caf77215e775c23d84703b382bb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/state.json",
+      "bytes": 45033,
+      "sha256": "98149ae75794d7c0ee62feaa28f2cad3a2d2b78e7428a626c6f9131beea1d99e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o128-attempt1/stream.jsonl",
+      "bytes": 30081,
+      "sha256": "8371dda0879d0affdc62bc619cbf7ace11d5569eb11560fb4f3161a544f99e62"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/memory.jsonl",
+      "bytes": 535,
+      "sha256": "b745e06f41cee42bf053090aab5b06dfd6f5658c641895adbc4176cfce16a961"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/result.json",
+      "bytes": 68633,
+      "sha256": "59e10c41e5abbefc4b1229e89b6fc103d0678c92dd8464c61c87bb259d3c79b9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/state.json",
+      "bytes": 45033,
+      "sha256": "8d55da3b27e82553810715c76e4a45cc530dff97a7311ff3e78d4a3f9f20e3e3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q4-i256-o512-attempt1/stream.jsonl",
+      "bytes": 110049,
+      "sha256": "dae95416070c6d557c906cf0e0e1639e3b4c3411c7d17908e37df52657fba185"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/memory.jsonl",
+      "bytes": 382,
+      "sha256": "73643b0ed6b1b9c59d21297b552f87145327cddefb9caf4b46e6fd4f49df31a3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "a3841a87544101ddd243ee7e90bc5f48b19ba81f4e99011862f8c9008f345bcb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/result.json",
+      "bytes": 60604,
+      "sha256": "ab4dbb53900443e0a224348bcc2de95ff35d8dd5d8cd894ec4938d9aac3a01db"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/state.json",
+      "bytes": 44927,
+      "sha256": "7c677c603e9c4744d4fbc0ea40e5095cbe6ed42821923a829cad7b16aab94fc2"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o128-attempt1/stream.jsonl",
+      "bytes": 34863,
+      "sha256": "e8f7c6602a2b208c67c79fc7e2eed80fc531c018522d5129eec188cca284a4d2"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/memory.jsonl",
+      "bytes": 763,
+      "sha256": "8a4431494cd1bf8d976d6dc0f6e5e0aeb1e07cf260e532d6ff635e034d05b285"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "01e67b8536d50edb0100f4ede71e8d74842a62d1a430d284d134104a438734c4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/result.json",
+      "bytes": 73298,
+      "sha256": "a8b2ab9c3d3d6d403c96b9f0764bafa6bd300dd9637d73c6e28cf625c6f8d94d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/state.json",
+      "bytes": 45030,
+      "sha256": "d6228a38b3c0a68b77d107d41cbcaa1ebc2a6e53156aa4c5088d1fb855cb3e5a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i1024-o512-attempt1/stream.jsonl",
+      "bytes": 115108,
+      "sha256": "98e566ce2600d180acf4277443c48648320c465261554663d99602fb38ae864a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/auxiliary-warmup-stream.jsonl",
+      "bytes": 41005,
+      "sha256": "531edc9545857e02099a95537f6952a8a394f7614b42c902f79ff3820e3325ff"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/auxiliary-warmup.json",
+      "bytes": 19794,
+      "sha256": "ee1d6368b8465068f193f1c26cd542982cf0f3e1aaaf5306088a3bea164548c5"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/memory.jsonl",
+      "bytes": 693,
+      "sha256": "9ec68fdb7f2298de79454f49ca94a147bb33a062efc8ed31defe8fc272d3e5f8"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "b9f831636e3ed53e9052024998ffa74021a4747b8037eb6cfe85a55b96d90bcd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/result.json",
+      "bytes": 67278,
+      "sha256": "a083f4bf7cc55ba6612e12397cd95d28045cf882e8f2712491183e4548f0cc75"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/server.txt",
+      "bytes": 25002,
+      "sha256": "22017d9b00732f7331ad4a9f3fe948d4e72b3ec6e1d8f9db4e2437fd90fbe118"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/state.json",
+      "bytes": 45398,
+      "sha256": "9df84fcddbbb8f468dac4c147e0d5ec0ffe1fad3efd6b1649bade89e2b4a944b"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/stream.jsonl",
+      "bytes": 41017,
+      "sha256": "e07ced79caf44b901468f4cdf9f3bb87e59eb9289bb891b61e8810298557c3ee"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o128-attempt1/thermal-gate.json",
+      "bytes": 496,
+      "sha256": "6797ff40624a332bd90e657882140a9a945d0e2e1536981e5045cbfd3b31adca"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/memory.jsonl",
+      "bytes": 1149,
+      "sha256": "ac2be3d4b13d1ab39b3baf699179bb5f0865d1fc9c592732b7b0710504f61853"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "3f8209c6baaa75616247dc170451e82f4b73031a429625ca30cb429409a8af85"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/result.json",
+      "bytes": 79438,
+      "sha256": "defea0c7fb92e967f4ba7c8b52d4a93e5eab1b3f8555cd9bea2324f23aa235d5"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/state.json",
+      "bytes": 45030,
+      "sha256": "b28318196523e01ad36b02981d756c915fc02936fe1207913522ea815e0880c2"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i2048-o512-attempt1/stream.jsonl",
+      "bytes": 121231,
+      "sha256": "13f309872e2181a0e0e35695dfd5ccc1eae8d0609c6c15abb0dda5f6eec06762"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/memory.jsonl",
+      "bytes": 154,
+      "sha256": "4c6641b3a924e8b390e6d4f647f339406ff105da115ca6686d8593a891382e0e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/result.json",
+      "bytes": 55947,
+      "sha256": "01ebfb81f23b1697c65c71763cfe1bf1d029c351c6c102d93d15a4d5d3e928c0"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/state.json",
+      "bytes": 44924,
+      "sha256": "fec75f7609cd6ccfa91e3590379c0bbf4c492c9e5938667cda80a0f458692b61"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o128-attempt1/stream.jsonl",
+      "bytes": 30098,
+      "sha256": "67520646996a183230cff0fba43ec2a84b02387a0b0e77da6f82e92cee91ec10"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/memory.jsonl",
+      "bytes": 538,
+      "sha256": "934192e04e576e184ada1de6487099bd6ab934cb9026f5adb494b1b492ee915a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/result.json",
+      "bytes": 68636,
+      "sha256": "9e9e2ad96079847e303253f2f94f63a4a86fcc2cc1e2e112cdebcd05e28d9eed"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/state.json",
+      "bytes": 45027,
+      "sha256": "6022d972fe1edd357f8503d4bc8395b35e5d83479bd3eef594156659dd3320d7"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen05_q8-i256-o512-attempt1/stream.jsonl",
+      "bytes": 109831,
+      "sha256": "a2dff43014e5b0001b892c5ed2590b1353c7acc8b9431ee55955adf79c426c0f"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/memory.jsonl",
+      "bytes": 934,
+      "sha256": "89f2cccd751c7f2ebc0983c7a77d5bb9c1b4b5f95add706e32db706ce88f6667"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "a3841a87544101ddd243ee7e90bc5f48b19ba81f4e99011862f8c9008f345bcb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/result.json",
+      "bytes": 62924,
+      "sha256": "4399b366ca2ef1539537e0b6284144f0b3a86066de30f93a1dbfd84ce3ede6e3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/state.json",
+      "bytes": 47287,
+      "sha256": "b0553dfcee59eb8492f6e94f4867b689b79f599b26f81b275a26407ebbf2ddc8"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o128-attempt1/stream.jsonl",
+      "bytes": 34798,
+      "sha256": "c5b82727275cc44c979dad2d6073aecc60839c78ebbec77013084badb63e8683"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/memory.jsonl",
+      "bytes": 1860,
+      "sha256": "22b6c0e8748b6ee439a064efa3d1d27173ca1fe251a70e70bac0819bdb182499"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "01e67b8536d50edb0100f4ede71e8d74842a62d1a430d284d134104a438734c4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/result.json",
+      "bytes": 73521,
+      "sha256": "dd8d6cf3b56b625e98bc55ab01281205c7276926740e90ef1fb69936c7200c50"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/state.json",
+      "bytes": 45385,
+      "sha256": "b6bf6d673fa026092e749155fea37178f6caf6d6f649246f6748d218eeff93db"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i1024-o512-attempt1/stream.jsonl",
+      "bytes": 115078,
+      "sha256": "4ec2bd0604f3b7d1ac76d41fce6670064827fc765892926072eded7000be497e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/memory.jsonl",
+      "bytes": 1785,
+      "sha256": "2ef9c1a087510af6fc2053483785cc5762d9cf3d9cffd8fc8393bb1573b52769"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "b9f831636e3ed53e9052024998ffa74021a4747b8037eb6cfe85a55b96d90bcd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/result.json",
+      "bytes": 69095,
+      "sha256": "08b9510c4a557526f32454c990e7f8b4e379f615440fdc33951da289b55b095e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/state.json",
+      "bytes": 47287,
+      "sha256": "573d7d2a65531258737fcf4e43170dc91fcf70bd1f81f41cd47bb2ad07be1d7f"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o128-attempt1/stream.jsonl",
+      "bytes": 41079,
+      "sha256": "f69116722bca6b9f2bdd65ebc6b7aa0aac4f87e010223acb9c0ac9176cdc1fc2"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/memory.jsonl",
+      "bytes": 2709,
+      "sha256": "4d3e64519eb0bec55a16783849ccf1e85c3405efd9ac03d61ce5b0a64c092ea4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "3f8209c6baaa75616247dc170451e82f4b73031a429625ca30cb429409a8af85"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/result.json",
+      "bytes": 79374,
+      "sha256": "85181108296bf255ae0fc64e4afe61fc5dcf28ff62e37047436e775dd7a1acdd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/state.json",
+      "bytes": 45142,
+      "sha256": "01c83506ad6c5f2433cbc154a80713e7402d2951b88da1caa5f105e6715df692"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i2048-o512-attempt1/stream.jsonl",
+      "bytes": 121350,
+      "sha256": "353e44412d23d09af4eb8d89ba9346ae34a77618ebb9e8182d43f78112d26a35"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/memory.jsonl",
+      "bytes": 388,
+      "sha256": "dcf172568377359c4d11ea5519d77214004c9279be14f93fc9304b26724c506b"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/result.json",
+      "bytes": 56021,
+      "sha256": "2b5c3ada0791085e9782041cf1c92ef0cacb14368318bfa0dda853936149d5bf"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/state.json",
+      "bytes": 45033,
+      "sha256": "4e6de57a7a380d272577d63efa682649971c270377238333f9f20e6bf41979b7"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o128-attempt1/stream.jsonl",
+      "bytes": 30097,
+      "sha256": "1b0000742b031b5837b4908a651fa0f850ab288c51a776fd6c3b3ec737c9cf9a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/auxiliary-warmup-stream.jsonl",
+      "bytes": 110116,
+      "sha256": "397965b54982f9b5c628ec35a7d3a840bb704f263f9a092da601e7a502003217"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/auxiliary-warmup.json",
+      "bytes": 21461,
+      "sha256": "b5252446d701b942d8cf2e5959c9dbef7a7781913775faf0fab8e7a0b94128ba"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/memory.jsonl",
+      "bytes": 1470,
+      "sha256": "de73278d08fb4afba0503f65318dcdfe66b1f664377c636575587d639c96bb0d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/result.json",
+      "bytes": 70435,
+      "sha256": "a22a2cdb84d942ce82e44e92ef0abd04d48420c491b7215146d461d037292fab"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/server.txt",
+      "bytes": 25351,
+      "sha256": "8bdf69a3d5c620260a3e0ee052490297a1e494f2bff35a593d60399bf75876b4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/state.json",
+      "bytes": 46963,
+      "sha256": "12de2d815c1ab0463b1d258e39057519f20ccab93352dea18633492347d24768"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/stream.jsonl",
+      "bytes": 110144,
+      "sha256": "11b6d7e35b5876908b21807465c0a100f2b216889be043c8153c650342f83a3a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q4-i256-o512-attempt1/thermal-gate.json",
+      "bytes": 506,
+      "sha256": "45c84b4e0e7a65c6178e67fcab8c919326009cc6cfe7abfd9bd3484b8b9e7ffb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/memory.jsonl",
+      "bytes": 925,
+      "sha256": "bbdc8e7d30b5a51ec93a5e09aa925b3be50a16ca7d7538ad343377d8e8afd18c"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "a3841a87544101ddd243ee7e90bc5f48b19ba81f4e99011862f8c9008f345bcb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/result.json",
+      "bytes": 62182,
+      "sha256": "e8048198548fb6e48ace25d238d06b9e722c7f7eb7f09c3ad2ac8fcac1169dc1"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/state.json",
+      "bytes": 46583,
+      "sha256": "7350f8c5da33a1ee191b1aaea63dda3204627bbc39ed4ad70d9bb1ff4743ea3a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o128-attempt1/stream.jsonl",
+      "bytes": 34841,
+      "sha256": "6aaa94d0a6d57880d2168d344980eca3e3e274777b69d2b1341cd438f7b72747"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/memory.jsonl",
+      "bytes": 1937,
+      "sha256": "2e87ea362e221039ba503787685a2eecc7dce822670a13a2099700c361d28a16"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/prompt.json",
+      "bytes": 16486,
+      "sha256": "44493095f2a1a48bdb15a660abee79933fe92eecfbb46831bbd7bd96f25ebca9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/request.json",
+      "bytes": 10193,
+      "sha256": "01e67b8536d50edb0100f4ede71e8d74842a62d1a430d284d134104a438734c4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/result.json",
+      "bytes": 74577,
+      "sha256": "fa3903de27a5ae0771bb5b8b2fd0f6f4149c1b578cb96b68d9dafd7fa2d5caf4"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/state.json",
+      "bytes": 46583,
+      "sha256": "041f4c0904fc0541eac8508dc24fba48c286e9df7fdd224c664b4408af9e3fab"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i1024-o512-attempt1/stream.jsonl",
+      "bytes": 115308,
+      "sha256": "368f453b78a1a67ed8edf2bfb150c6cc9b9768fb4272854c7328cf91033f987a"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/memory.jsonl",
+      "bytes": 1636,
+      "sha256": "4ba27400719f053918dd36d5222e6532fea8428f70ec9fad6ae841f56453e10d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "b9f831636e3ed53e9052024998ffa74021a4747b8037eb6cfe85a55b96d90bcd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/result.json",
+      "bytes": 68383,
+      "sha256": "d0bfe211ccb4552a781bdcabd1833dedfe20826afa776b955077fc80f2d23b94"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/state.json",
+      "bytes": 46583,
+      "sha256": "baa8f6e63aa51fa6de066c282c50671a0cdd2abdc692d9aa3637d827d3934381"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o128-attempt1/stream.jsonl",
+      "bytes": 41102,
+      "sha256": "76acb2aa9976cdb1df27f00a37fdf15b596f6763a88258931c1224ff0726d2fb"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/auxiliary-warmup-stream.jsonl",
+      "bytes": 121588,
+      "sha256": "31b87c555494f74d427af5dfb3d528db8b2afc91e7f9cf6bcb006a0babf5b16b"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/auxiliary-warmup.json",
+      "bytes": 32137,
+      "sha256": "afe43ec7fc52a96417b2b37153970b171583587b94eeeebfe50868721d6b83ab"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/memory.jsonl",
+      "bytes": 2558,
+      "sha256": "47e32cfbc7a7c75080508eaff40ca951ee96644d928326c45ff62c1655905c94"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/prompt.json",
+      "bytes": 32685,
+      "sha256": "2f12169df58631645a8b58335bec6ed15ea5176221b87ae07415036e2e869ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/request.json",
+      "bytes": 20188,
+      "sha256": "3f8209c6baaa75616247dc170451e82f4b73031a429625ca30cb429409a8af85"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/result.json",
+      "bytes": 81112,
+      "sha256": "0491ce13d9de9e4db5a5d73952391128c4d238d67967c1c802b10cac8c043ea2"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/server.txt",
+      "bytes": 23112,
+      "sha256": "8d2be0cf8b7c23f286ccb4b764dc286e905c47c3cda53983c6719bfe6d88be7f"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/state.json",
+      "bytes": 46920,
+      "sha256": "0396154b8d57533e3d58ed4c484a11db965e8c9892f33a48725bb682bc3569cd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/stream.jsonl",
+      "bytes": 121592,
+      "sha256": "d2486b7fa4d999db0fbe3111b46f2f8587f1b1dab81768b95d857c4e4e675eac"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i2048-o512-attempt1/thermal-gate.json",
+      "bytes": 1926,
+      "sha256": "8172067de7d4c2aea0567e85adc7038a50877c5ddb341a7fb2c96fb87913ef99"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/memory.jsonl",
+      "bytes": 463,
+      "sha256": "f059ea04428972a50979ba5279eeb14787e3055daf6c36d4fa1204dc652687a6"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "971fd9b05c99ba82abcf90bfca1f125fd84331e5ba0d912511ff5bb195571ee3"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/result.json",
+      "bytes": 57524,
+      "sha256": "c4f00c0b2a5774050189fa5e317b676434e6e54f76f60cec27ed4f07b8c1b748"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/state.json",
+      "bytes": 46580,
+      "sha256": "f97783de59500df4df7e8e69446f7a34398af91a79bcf6e5b9c4153fe8d41812"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o128-attempt1/stream.jsonl",
+      "bytes": 30100,
+      "sha256": "65ed86c8c4eb093461f987b964e0d2698338280226e3c5519c08434f9eeef546"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/auxiliary-warmup-stream.jsonl",
+      "bytes": 110127,
+      "sha256": "c29ff41e4b2c0f3e1c3298563ee6ab87c590ad9ec9cfdf127e027b5f3e0001b8"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/auxiliary-warmup.json",
+      "bytes": 21277,
+      "sha256": "52c985015537748acec83750cf5a79284913b2fc6a12f25b3e9e76ffd2f60ad8"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/memory.jsonl",
+      "bytes": 1543,
+      "sha256": "412c5e2f462e1b3ac225236d61b52cc7cbc6150f9a6cece688170dce5a1629db"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/prompt.json",
+      "bytes": 4352,
+      "sha256": "6c934559f7e3ac5db3e13f6ede6d9b11e813075b2927193b283617f0c6da741e"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/request.json",
+      "bytes": 2706,
+      "sha256": "2374ee442aa6b9193755e2c587004e6e205d332f30074da3bbf520b6adbf3eb9"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/result.json",
+      "bytes": 70607,
+      "sha256": "e4ef9cc036e6434ae28f3dc8f815381912e10ac6ac047145c9dd05c05df755dd"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/server.txt",
+      "bytes": 15265,
+      "sha256": "36eb0048621a9ac2ee2a4f55900ec0dfff45c2209ef335a82c30fb9b5cf69e1d"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/state.json",
+      "bytes": 47284,
+      "sha256": "21d4e7016335187cb93d840cbeb6b509e09fd69bafb07cb95d1eb1412d294832"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/stream.jsonl",
+      "bytes": 110136,
+      "sha256": "02dd70d51f4153fc00009d3b9ee89029c5a6a096dab8e0a12a7bd7dd7fcc3fc5"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/runs/presentation-qwen15_q8-i256-o512-attempt1/thermal-gate.json",
+      "bytes": 507,
+      "sha256": "1ddfb5fb4eca8e2828677fabb93ecef25fdba45b1ad451edaf504658d2db6aaa"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/sensors-20261113T004539.jsonl",
+      "bytes": 261605,
+      "sha256": "1677e5ed1fb02cb536cce9180cd9233fc611c62ecf92a552f1ac66f6eedd7cca"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/sensors-20261113T004539.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/sensors-20261113T004748.jsonl",
+      "bytes": 1571410,
+      "sha256": "6e3b8e969d89750056eafbda37e08db27689154994f4775f67155d3a76c53c12"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/sensors-20261113T004748.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/study-config.json",
+      "bytes": 2596,
+      "sha256": "16122da6381113d42d62556119c4ab64f446941a476d134b37e7cdc808992193"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/study.json",
+      "bytes": 2596,
+      "sha256": "16122da6381113d42d62556119c4ab64f446941a476d134b37e7cdc808992193"
+    },
+    {
+      "path": "results/mac-20261113-presentation-v2/summary.jsonl",
+      "bytes": 1542573,
+      "sha256": "e8951436916fc6e8c8665131cd520d55517c63456411467db1e579eba892891d"
+    },
+    {
+      "path": "results/setup/build-cpu.txt",
+      "bytes": 2497,
+      "sha256": "e775b5165be366675058da8d476cd1b7d40a1ad286bde27d80edf27a57d1952d"
+    },
+    {
+      "path": "results/setup/four-token-smoke-server.txt",
+      "bytes": 12500,
+      "sha256": "c44cfa8f895b062035e01409827cf2d4686ae38697ece4bb08c74e90ffa7dcd9"
     }
   ]
 }

@@ -83,3 +83,11 @@ deliverables/validation/video-review/
 results/study.lock
 **/__pycache__/
 **/.systemcache/
+
+# Internal project workflow and presentation-production artifacts stay local.
+/AGENTS.md
+/PROJECT_JOURNAL.md
+/PROJECT_PROPOSAL.md
+/MODEL_RECOMMENDATIONS.md
+/PRESENTATION_AND_SUBMISSION_REQUIREMENTS.md
+/deliverables/

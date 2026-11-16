@@ -1,2 +1,0 @@
-Trace loaded: 0.01 MB in 0.03s (0.3 MB/s)
-query: unable to read file 'SELECT t.name, COUNT(*) AS samples, MIN(c.value) AS minimum, MAX(c.value) AS maximum FROM counter c JOIN counter_track t ON c.track_id=t.id GROUP BY t.name;'
