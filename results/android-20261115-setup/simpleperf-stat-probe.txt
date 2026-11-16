@@ -1,0 +1,6 @@
+Performance counter statistics:
+
+#      count  event_name   # count / runtime
+  30,445,335  cpu-cycles   # 1.148656 GHz
+
+Total test time: 1.001811 seconds.

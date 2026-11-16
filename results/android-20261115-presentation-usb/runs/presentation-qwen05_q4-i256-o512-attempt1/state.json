@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "presentation-qwen05_q4-i256-o512-attempt1",
+  "task": {
+    "model_id": "qwen05_q4",
+    "input_tokens": 256,
+    "output_tokens": 512,
+    "cache_type": "f16",
+    "id": "presentation-qwen05_q4-i256-o512",
+    "phase": "main",
+    "repetition": 1,
+    "randomized_model_block": 2,
+    "randomized_position": 2
+  },
+  "status": "starting",
+  "created_at": "2026-11-16T00:44:39.741970+00:00",
+  "device": "realme-RMX3930",
+  "transport": "USB ADB forward; host SSE arrival proxies",
+  "sensor_log": "sensors.jsonl",
+  "energy_joules": null,
+  "energy_reason": "No validated device-energy counter; charging; sysfs permission denied",
+  "model": {
+    "id": "qwen05_q4",
+    "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+    "repo": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+    "revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+    "filename": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "bytes": 491400032,
+    "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/9217f5db79a29953eb74d5343926648285ec7e67/qwen2.5-0.5b-instruct-q4_k_m.gguf"
+  },
+  "preload_gate": {
+    "skipped": true,
+    "reason": "one bounded thermal observation per loaded model block",
+    "exploratory": true
+  },
+  "same_process_reused": true,
+  "startup_ready_seconds": null,
+  "server_log": "runs/presentation-qwen05_q4-i1024-o512-attempt1/server.txt",
+  "server_pid": 20811,
+  "request_gate": {
+    "skipped": true,
+    "reason": "user-approved exploratory single pass; continuous monitoring and per-block bounded observation, no strict stabilization claim",
+    "exploratory": true,
+    "at": "2026-11-16T00:44:39.868884+00:00",
+    "thermal_status_before": 0,
+    "soc_temperature_before_celsius": 77.896
+  },
+  "process_memory_before": "Applications Memory Usage (in Kilobytes):\nUptime: 7932602 Realtime: 7932602\n                   Pss  Private  Private     Swap      Rss     Heap     Heap     Heap\n                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free\n                ------   ------   ------   ------   ------   ------   ------   ------\n  Native Heap    91752    91752        0        0    91752        0        0        0\n  Dalvik Heap        0        0        0        0        0        0        0        0\n        Stack      348      348        0        0      348                           \n    Other dev        0        0        0        0      264                           \n     .so mmap      101       76        0        0     1384                           \n   Other mmap   477847      172   477672        0   478252                           \n      Unknown      856      856        0        0      856                           \n        TOTAL   570904    93204   477672        0   572856        0        0        0\n \n App Summary\n                       Pss(KB)                        Rss(KB)\n                        ------                         ------\n           Java Heap:        0                              0\n         Native Heap:    91752                          91752\n                Code:       76                           1384\n               Stack:      348                            348\n            Graphics:        0                              0\n       Private Other:   478700\n              System:       28\n             Unknown:                                  479372\n \n           TOTAL PSS:   570904            TOTAL RSS:   572856      TOTAL SWAP (KB):        0\n"
+}

@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-15T22:48:36.962360+00:00",
+  "runtime_commit": "79967ec596c0dacfd2251b085a57e79df292b1cc",
+  "source_archive_sha256": "d889a9d0ae45457a8f27e26e97fd8531d64e1b01063ccc03412d5cfe34742727",
+  "binary_sha256": "3759169a90deb5c2327d851a945a08554a6945931d46e7c4be229b928e4f33b6",
+  "ndk_source_properties": "Pkg.Desc = Android NDK\nPkg.Revision = 27.0.11718014-beta1\nPkg.BaseRevision = 27.0.11718014\nPkg.ReleaseName = r27-beta1\n",
+  "build_script": "#!/bin/sh\n# Cross-build only. No phone is modified and no Android success is implied.\nset -eu\n: \"${ANDROID_NDK:?Set ANDROID_NDK to an installed NDK directory}\"\nRUNTIME_DIR=${EFFAI_RUNTIME_DIR:-\"$HOME/.cache/effai/runtime\"}\nSOURCE=\"$RUNTIME_DIR/llama.cpp-79967ec596c0dacfd2251b085a57e79df292b1cc\"\ntest -d \"$SOURCE\"\ntest -f \"$ANDROID_NDK/build/cmake/android.toolchain.cmake\"\ncmake -S \"$SOURCE\" -B \"$SOURCE/build-android-cpu\" \\\n  -DCMAKE_TOOLCHAIN_FILE=\"$ANDROID_NDK/build/cmake/android.toolchain.cmake\" \\\n  -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-28 \\\n  -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS=-march=armv8-a \\\n  -DCMAKE_CXX_FLAGS=-march=armv8-a -DGGML_NATIVE=OFF \\\n  -DGGML_CPU_ARM_ARCH=armv8-a -DGGML_OPENMP=OFF \\\n  -DBUILD_SHARED_LIBS=OFF -DANDROID_STL=c++_static \\\n  -DGGML_LLAMAFILE=OFF -DGGML_METAL=OFF -DGGML_VULKAN=OFF \\\n  -DGGML_BLAS=OFF -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF\ncmake --build \"$SOURCE/build-android-cpu\" --target llama-server llama-bench llama-perplexity -j 4\n",
+  "cmake_cache_sha256": "91275456f595c1a0231f465f0497df0255a30612325b8b45315b5d838f8ed4ef",
+  "existing_device_model_checksums": "existing-device-checksums.txt",
+  "startup_fix": "launch from /data/local/tmp/effai, not Android shell root directory; prevents current-directory backend scan from stat of inaccessible /init"
+}

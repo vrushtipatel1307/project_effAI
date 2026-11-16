@@ -1,0 +1,16 @@
+{
+  "mac_session": "mac-20261113-presentation-v2",
+  "android_session": "android-20261115-presentation-usb",
+  "matched_configurations": 24,
+  "expected_configurations": 24,
+  "missing_android_configs": [],
+  "missing_mac_configs": [],
+  "workload_identity_issues": [],
+  "all_24_matched": true,
+  "interpretation": "two-device descriptive n=1 points, no SD, repeatability, confidence interval, or causal hardware-only claim",
+  "timing_boundary": "runtime prefill/decode; wall and arrival metrics include platform/transport/client costs",
+  "build_boundary": "same llama.cpp commit/model hashes and CPU workload; platform-specific CPU kernels and compile options (Mac Accelerate, Android verified ARM dotprod/FP16)",
+  "memory_boundary": "sampled process RSS, Mac 1s vs Android 2s cadence; not guaranteed lifetime peak; different OS accounting/runtime allocation",
+  "thermal_boundary": "Mac CPU average and Android HAL SoC proxy have different sensor locations/calibration; no direct temperature superiority claim",
+  "energy_boundary": "Mac component estimates and Android unvalidated/charging counters are not comparable; no cross-device energy ratio"
+}

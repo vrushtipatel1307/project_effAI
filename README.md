@@ -4,9 +4,13 @@ This repository supports a two-device study of Qwen2.5 inference efficiency on a
 
 ## Evidence status
 
-The user's current presentation scope is a completed exploratory Mac CPU pilot with one observation per main-matrix configuration. Session `results/mac-20261113-presentation-v2/` has 24/24 unique configurations independently audited for token counts, stop reason, truncation, disabled cache, stream counts, and timing denominators. Thermal stabilization under the full protocol was not demonstrated; treat these as descriptive observations only. One run/configuration cannot support SD, significance, or repeatability. Android results are pending, so this is not a completed two-device study.
+Both exploratory CPU sessions are complete: **24/24 unique Mac configurations and 24/24 unique Android configurations**, one observation per configuration on each device. All 24 pairs match prompt text, exact token IDs and complete request JSON. Main audits validate exact token counts, stop limits, no truncation, no prompt reuse and timing denominators.
 
-The complete controlled protocol remains in `configs/study.json` and `docs/protocol.md`: 24 configurations per device, three measured repetitions/configuration after a warm-up, a two-minute minimum gap, and a strict thermal gate. Across both devices that would be 48 configurations and 144 measured requests. Do not blend that future protocol with the completed 24-request Mac exploratory session. All measured results, failures, and unavailable sensors remain in the raw session directories.
+Start with the [public phone research index](docs/phone-research.md), [device inventory](docs/android-device.md), [Android summary](analysis/android-20261115-presentation-usb/SUMMARY.md) and [matched comparison](analysis/two-device-android-20261115-presentation-usb/COMPARISON.md). Raw evidence includes the completed USB session, earlier setup/pilots and unsuccessful wireless attempts; they are labeled separately and are not pooled.
+
+These are descriptive **n=1** observations. No SD, significance, repeatability or strict thermal-stabilization claim is supported. Android energy is unavailable; the phone was USB charging. Native kernels, OS, power and thermal histories differ, so comparisons describe the tested systems rather than isolated hardware effects.
+
+The complete controlled protocol remains in `configs/study.json` and `docs/protocol.md`: 24 configurations per device, three measured repetitions/configuration after warm-up, a two-minute minimum gap and a strict thermal gate. The full 144-request repeated study, focused KV comparison, validated Android energy, quality and operator/overhead studies remain pending.
 
 ## Selected workload
 
@@ -34,7 +38,15 @@ Use a new session identifier for a changed config, runtime, corpus, manifest, or
 
 ## Android
 
-The tested device must first be identified and its RAM, Android build, thermal sensors, and memory headroom recorded. Use `docs/android-handoff.md` for ARM64 CPU build, largest-condition pilot, monitoring, and evidence return instructions. The checked-in build script performs a cross-build only; it does not imply that a phone run succeeded.
+The measured phone is realme RMX3930/T612 (user identifies it as C61), Android 14, with 5.63 GiB OS-visible RAM. Read [device inventory and execution boundaries](docs/android-device.md) before reproducing an experiment. Use a new session ID and record a fresh device inventory; the historical sessions must remain unchanged.
+
+Reanalyze the saved evidence without a phone or model downloads:
+
+```sh
+python3 -m pip install -r requirements.txt
+python3 analysis/analyze_android.py --session android-20261115-presentation-usb
+python3 analysis/compare_devices.py --android-session android-20261115-presentation-usb
+```
 
 ## Project files
 
@@ -51,10 +63,11 @@ The tested device must first be identified and its RAM, Android build, thermal s
 ## Completion checklist
 
 - Mac presentation pilot: complete, 24/24 unique single observations; n=1 per configuration.
-- Full repeated Mac protocol: pending. Android device identification, pilot, and matrix: pending teammate execution.
+- Android presentation matrix: complete, 24/24 exploratory observations; 24/24 exact matched pairs with Mac.
+- Full controlled repetitions and remaining focused studies: pending.
 - Report PDF and slide PDF: rendered and visually reviewed.
 - Demo video: prior local version rejected by the user and not published; replacement pending.
-- GitHub publication and iCollege submission: publication is pending until the push is verified; iCollege submission is not verified.
+- Phone evidence publication: see docs/phone-research.md and its checksum manifest. iCollege submission is not verified.
 
 Rebuild the report and slide PDFs with `python3 deliverables/source/build_artifacts.py`. The prior local demo build was rejected by the user and is not part of this published testbed; replacement pending.
 

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/addie/repos/project_effAI/scripts/run_android_study.py", line 358, in <module>
+    main()
+    ~~~~^^
+  File "/Users/addie/repos/project_effAI/scripts/run_android_study.py", line 302, in main
+    lock=(ROOT/'results/android-study.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+                                                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BlockingIOError: [Errno 35] Resource temporarily unavailable

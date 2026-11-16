@@ -1,0 +1,4 @@
+2026-11-15T23:16:49.275926+00:00 Collecting strict Android idle baseline and charging to minimum battery
+2026-11-15T23:16:49.283695+00:00 Gate: {"at": "2026-11-15T23:16:49.281846+00:00", "wait_seconds": 0.0015611669805366546, "coverage_seconds": 0, "samples": 0, "mean_celsius": null, "min_celsius": null, "max_celsius": null, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": null, "fresh": false, "thermal_nominal": false, "stable": false, "cool": false, "quiet": false, "repeat_gap_satisfied": true, "battery_percent": 0, "minimum_battery_percent": 5, "strict_stabilization_required": false, "accepted": false}
+2026-11-15T23:17:04.306668+00:00 Starting smoke-qwen05_q4-i256-o128
+2026-11-15T23:17:29.689816+00:00 OK smoke-qwen05_q4-i256-o128 wall=21.38s decode=10.970 tok/s RSS=573588 KiB peakSoC=79.186

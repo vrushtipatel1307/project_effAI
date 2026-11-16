@@ -1,0 +1,28 @@
+[
+  {
+    "run_id": "presentation-qwen15_q8-i256-o512-attempt1",
+    "record_path": "results/android-20261115-presentation-usb/runs/presentation-qwen15_q8-i256-o512-attempt1/result.json",
+    "phase": "main",
+    "model_id": "qwen15_q8",
+    "input_tokens": 256,
+    "output_tokens": 512,
+    "cache_type": "f16",
+    "repetition": 1,
+    "context_capacity_tokens": 3072,
+    "logical_prompt_plus_output_tokens": 768,
+    "final_occupied_kv_positions_reported": 767,
+    "prefill_seconds": 29.681275000000003,
+    "prefill_tokens_per_second": 8.62496641401018,
+    "decode_seconds": 144.540137,
+    "decode_tokens_per_second": 3.542268677938226,
+    "request_wall_seconds": 174.26851895899745,
+    "ttft_host_arrival_seconds": 29.715554833994247,
+    "itl_host_arrival_median_seconds": 0.26316741699702106,
+    "sampled_peak_rss_mib": 1974.3125,
+    "peak_soc_temperature_celsius": 79.444,
+    "mean_process_cpu_percent_one_core_100": 379.6856304498508,
+    "minimum_mem_available_mib": 3505.53125,
+    "thermal_statuses": "0",
+    "request_energy_joules": null
+  }
+]

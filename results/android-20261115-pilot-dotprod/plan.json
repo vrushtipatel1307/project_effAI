@@ -1,0 +1,20 @@
+[
+  {
+    "model_id": "qwen15_q8",
+    "input_tokens": 2048,
+    "output_tokens": 512,
+    "cache_type": "f16",
+    "id": "pilot-largest-0",
+    "phase": "pilot",
+    "repetition": 0
+  },
+  {
+    "model_id": "qwen15_q8",
+    "input_tokens": 2048,
+    "output_tokens": 512,
+    "cache_type": "f16",
+    "id": "pilot-largest-1",
+    "phase": "pilot",
+    "repetition": 1
+  }
+]

@@ -1,0 +1,2 @@
+# Analysis plotting dependency; benchmark harness uses Python standard library.
+matplotlib==3.11.0

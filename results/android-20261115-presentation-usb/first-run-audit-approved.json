@@ -1,0 +1,10 @@
+{
+  "approved_at": "2026-11-15T23:50:27.509322+00:00",
+  "approved_run_id": "presentation-qwen15_q8-i256-o512-attempt1",
+  "validated_main_observations": 1,
+  "audit_evidence": "first-run-validation/",
+  "audit_sha256": "47aa8f43e8bae38f435cde72de31aac4cf5d9803d193f8286ece21bbfcbb7963",
+  "analysis_script_sha256": "89fb67969f6031b31c2ec23e1d71116d6b07294289eddb6e0575bec6263324b4",
+  "cross_device_prompt_and_request_identity": true,
+  "note": "Independent raw prompt/request/SSE/startup/thermal-policy/rate audit passed; parent authorized continuation, no user approval needed"
+}

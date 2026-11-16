@@ -1,0 +1,23 @@
+[
+  {
+    "at": "2026-11-15T22:52:42.549408+00:00",
+    "wait_seconds": 0.00029916700441390276,
+    "coverage_seconds": 18.351838874979876,
+    "samples": 10,
+    "mean_celsius": 30.5208,
+    "min_celsius": 28.626,
+    "max_celsius": 36.778,
+    "idle_baseline_celsius": 29.4645,
+    "system_cpu_active_ratio_mean": 0.06886190343105877,
+    "fresh": true,
+    "thermal_nominal": true,
+    "stable": false,
+    "cool": true,
+    "quiet": true,
+    "repeat_gap_satisfied": true,
+    "battery_percent": 10,
+    "minimum_battery_percent": 5,
+    "strict_stabilization_required": false,
+    "accepted": true
+  }
+]

@@ -1,0 +1,1 @@
+[331.215]     perfetto_cmd.cc:385 Could not open /data/local/tmp/effai/power-probe.pbtxt (errno: 13, Permission denied)

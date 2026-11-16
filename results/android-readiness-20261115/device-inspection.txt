@@ -1,0 +1,98 @@
+# Android read-only readiness inspection
+# Captured: 2026-11-15 (local workstation date; exact shell timestamp 22:42:23 UTC)
+# Device target is intentionally redacted. Commands below ran with D set to the connected ADB target.
+# No phone settings, packages, or files were changed; no model workload was run.
+# The initial broad `dumpsys meminfo` output included process names and is intentionally excluded.
+
+D='<authorized ADB target>'
+
+## Identity / OS / ABI
+Commands:
+  adb -s "$D" shell getprop ro.product.manufacturer
+  adb -s "$D" shell getprop ro.product.model
+  adb -s "$D" shell getprop ro.product.device
+  adb -s "$D" shell getprop ro.soc.model
+  adb -s "$D" shell getprop ro.build.version.release
+  adb -s "$D" shell getprop ro.build.version.sdk
+  adb -s "$D" shell getprop ro.product.cpu.abi
+  adb -s "$D" shell getprop ro.product.cpu.abilist
+Output:
+  manufacturer=realme
+  model=RMX3930
+  product.device=RE6054
+  SoC=T612
+  Android=14
+  SDK=34
+  ABI=arm64-v8a
+  ABI list=arm64-v8a,armeabi-v7a,armeabi
+
+## Memory
+Command:
+  adb -s "$D" shell cat /proc/meminfo | awk '/^(MemTotal|MemFree|MemAvailable|Buffers|Cached|SwapTotal|SwapFree):/ {print}'
+Output (kB):
+  MemTotal: 5905952
+  MemFree: 601176
+  MemAvailable: 3629236
+  Buffers: 2124
+  Cached: 3161928
+  SwapTotal: 3661820
+  SwapFree: 2239740
+Note: `/proc/swaps` returned `Permission denied`; swap backing/type was not verified.
+
+## Battery / power / thermal
+Commands:
+  adb -s "$D" shell dumpsys battery | awk '/(AC powered|USB powered|Wireless powered|status:|health:|level:|scale:|voltage:|temperature:)/ {print}'
+  adb -s "$D" shell dumpsys thermalservice
+  adb -s "$D" shell settings get global low_power
+  adb -s "$D" shell settings get global low_power_sticky
+  adb -s "$D" shell dumpsys power | awk '/mIsPowered=|mPlugType=|mBatteryLevel=|mLowPowerModeEnabled=|mDeviceIdleMode=|mScreenOn=|mStayOnWhilePluggedIn=/'
+Selected output:
+  AC powered=false; USB powered=true; Wireless powered=false
+  battery status=2 (charging); health=2; level=4%; scale=100; battery temperature=28.6 C
+  thermal service HAL ready/connected; Thermal Status=0 at inspection
+  current HAL readings: CPU zone 30.948 C; SoC zone 30.94 C; GPU zone 30.182 C; battery 28.6 C
+  settings low_power=0; low_power_sticky=0; device idle=false
+  powered=true; plug type=2 (USB); battery level=4%
+Note: Temperature readings are a single idle snapshot; no sustained load/throttling inference.
+
+## CPU / developer and ADB state
+Commands:
+  adb -s "$D" shell getconf _NPROCESSORS_ONLN
+  adb -s "$D" shell cat /sys/devices/system/cpu/online
+  adb -s "$D" shell cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+  adb -s "$D" shell cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+  adb -s "$D" shell cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+  adb -s "$D" shell settings get global development_settings_enabled
+  adb -s "$D" shell settings get global adb_enabled
+  adb -s "$D" shell getprop sys.usb.config
+  adb -s "$D" shell getprop persist.sys.usb.config
+Selected output:
+  online CPU count=8; online list=0-7
+  cpu0 current frequency=614400 kHz (snapshot); governor=uscfreq
+  cpu0 available frequencies: 614400 768000 884000 1040000 1228800 1378000 1536000 1612000 1716000 1820000 kHz
+  development_settings_enabled=1; adb_enabled=1
+  sys.usb.config=adb; persist.sys.usb.config=adb
+Note: CPU frequency is only a momentary value. No performance workload, affinity, or per-core sustained frequency check.
+
+## Runtime / device file presence
+Commands:
+  adb -s "$D" shell ls -lah /data/local/tmp/effai
+  adb -s "$D" shell toybox file /data/local/tmp/effai/llama-server
+  adb -s "$D" shell pidof llama-server
+  adb -s "$D" shell timeout 5 /data/local/tmp/effai/llama-server --version
+Selected output:
+  /data/local/tmp/effai/llama-server exists, 84 MiB, executable bit set
+  four GGUFs exist: Qwen2.5 0.5B Q4_K_M (469 MiB), 0.5B Q8_0 (644 MiB), 1.5B Q4_K_M (1.0 GiB), 1.5B Q8_0 (1.7 GiB)
+  toybox file: ELF shared object, 64-bit LSB arm64, dynamic (/system/bin/linker64), for Android 28, built by NDK r27-beta1 (11718014), BuildID=1ba86adb7437e53ff8a955c6b7b188a9357c9522, not stripped
+  pidof llama-server returned no PID
+  --version probe failed before version output:
+    libc++abi: terminating due to uncaught exception of type std::__ndk1::__fs::filesystem::filesystem_error: filesystem error: in posix_stat: failed to determine attributes for the specified path: Permission denied ["/init"]
+  adb shell ls -l /init also returned Permission denied
+Conclusion: ARM64-compatible Android binary and model files are present, but successful execution/runtime operation is not verified. No server was running and no benchmark request was sent.
+
+## Operational storage (not part of model-selection decision)
+Command:
+  adb -s "$D" shell df -h /data/local/tmp
+Output:
+  /data/user/0: 106G total, 24G used, 82G available, 23%
+Note: Android reports an emulated/shared data volume; this is operational detail only.

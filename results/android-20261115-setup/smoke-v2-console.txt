@@ -1,0 +1,17 @@
+2026-11-15T22:50:00.767922+00:00 Collecting strict Android idle baseline and charging to minimum battery
+2026-11-15T22:50:00.771778+00:00 Gate: {"at": "2026-11-15T22:50:00.768652+00:00", "wait_seconds": 3.283302066847682e-05, "coverage_seconds": 0, "samples": 0, "mean_celsius": null, "min_celsius": null, "max_celsius": null, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": null, "fresh": false, "thermal_nominal": false, "stable": false, "cool": false, "quiet": false, "repeat_gap_satisfied": true, "battery_percent": 0, "minimum_battery_percent": 5, "accepted": false}
+2026-11-15T22:50:30.805815+00:00 Gate: {"at": "2026-11-15T22:50:30.804347+00:00", "wait_seconds": 30.036324333021184, "coverage_seconds": 27.90742499998305, "samples": 15, "mean_celsius": 28.900666666666666, "min_celsius": 28.626, "max_celsius": 31.464, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": 0.03937345311732659, "fresh": true, "thermal_nominal": true, "stable": false, "cool": true, "quiet": true, "repeat_gap_satisfied": true, "battery_percent": 9, "minimum_battery_percent": 5, "accepted": false}
+2026-11-15T22:51:00.843858+00:00 Gate: {"at": "2026-11-15T22:51:00.841056+00:00", "wait_seconds": 60.07364275000873, "coverage_seconds": 58.08347554199281, "samples": 30, "mean_celsius": 30.6462, "min_celsius": 28.626, "max_celsius": 38.422, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": 0.10470908464562279, "fresh": true, "thermal_nominal": true, "stable": false, "cool": true, "quiet": true, "repeat_gap_satisfied": true, "battery_percent": 9, "minimum_battery_percent": 5, "accepted": false}
+2026-11-15T22:51:30.887796+00:00 Gate: {"at": "2026-11-15T22:51:30.885705+00:00", "wait_seconds": 90.11886366602266, "coverage_seconds": 60.278937583992956, "samples": 31, "mean_celsius": 31.179225806451612, "min_celsius": 29.658, "max_celsius": 38.422, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": 0.1015046074097706, "fresh": true, "thermal_nominal": true, "stable": false, "cool": true, "quiet": true, "repeat_gap_satisfied": true, "battery_percent": 9, "minimum_battery_percent": 5, "accepted": false}
+2026-11-15T22:52:00.933295+00:00 Gate: {"at": "2026-11-15T22:52:00.930958+00:00", "wait_seconds": 120.16471420801827, "coverage_seconds": 60.12087712500943, "samples": 31, "mean_celsius": 29.78961290322581, "min_celsius": 29.142, "max_celsius": 30.69, "idle_baseline_celsius": null, "system_cpu_active_ratio_mean": 0.03629309855520497, "fresh": true, "thermal_nominal": true, "stable": false, "cool": true, "quiet": true, "repeat_gap_satisfied": true, "battery_percent": 9, "minimum_battery_percent": 5, "accepted": false}
+Traceback (most recent call last):
+  File "/Users/addie/repos/project_effAI/scripts/run_android_study.py", line 355, in <module>
+    if __name__=='__main__':
+        ^^^^^^
+  File "/Users/addie/repos/project_effAI/scripts/run_android_study.py", line 327, in main
+    if path.exists():baseline=json.loads(path.read_text())['mean_celsius']
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/addie/repos/project_effAI/scripts/run_android_study.py", line 173, in gate
+    STOP.wait(5)
+    ~~~~~~~~~^^^
+InterruptedError: stop during gate

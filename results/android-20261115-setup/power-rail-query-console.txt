@@ -1,0 +1,3 @@
+agent mode: on as CODEX_CI is set: compact tables, capped results, JSON errors. --no-agent turns it off, `trace_processor help agent` explains more
+Trace loaded: 0.01 MB in 0.02s (0.4 MB/s)
+Query executed in 0 ms

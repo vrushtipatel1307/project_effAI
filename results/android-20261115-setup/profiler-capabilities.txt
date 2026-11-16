@@ -1,0 +1,4 @@
+simpleperf E cmd_stat.cpp:552] No threads to monitor. Try `simpleperf help stat` for help
+
+/system/bin/perfetto
+Perfetto v34.0 (N/A)

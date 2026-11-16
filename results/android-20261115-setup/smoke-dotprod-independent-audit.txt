@@ -1,0 +1,20 @@
+{
+  "session": "android-20261115-smoke-dotprod",
+  "planned_tasks": 1,
+  "validated_tasks": 1,
+  "validated_main_observations": 0,
+  "unique_main_configurations": 0,
+  "configurations_with_three_observations": 0,
+  "expected_main_configurations": 0,
+  "expected_main_observations": 0,
+  "adopted_full_matrix_configurations": 24,
+  "adopted_full_matrix_observations": 72,
+  "missing_tasks": [],
+  "invalid_or_failed_records": [],
+  "minimum_repeat_gap_seconds": null,
+  "energy_status": "unavailable: no validated meter/counter; charging",
+  "latency_boundary": "host-side SSE arrival over wireless ADB; not internal TTFT/ITL",
+  "temperature_boundary": "current HAL soc-thmzone type0 SoC proxy; sensor calibration/freshness not independently verified",
+  "device": "realme RMX3930/T612, Android14/API34, 5.63GiB OS-visible RAM; user identifies as C61",
+  "comparability": "Mac main matrix is exploratory n=1 without strict stabilization; do not pool observations or claim symmetric controlled study"
+}

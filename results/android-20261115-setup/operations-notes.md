@@ -1,0 +1,13 @@
+# Android setup operations, 2026-11-15
+
+- Wireless ADB connected after initial failure and daemon startup/discovery. Identifiers omitted from report artifacts.
+- Existing four on-device GGUF checksums exactly match `configs/models.json`; reused those files.
+- Cross-built the pinned source with explicit `GGML_NATIVE=OFF` and `GGML_CPU_ARM_ARCH=armv8-a`; retained existing binary and installed a separately named verified binary. NDK is r27-beta1, not a final r27 release.
+- Resolved the existing binary's `/init` filesystem exception by changing cwd to `/data/local/tmp/effai` before launch. Backend discovery scans the working directory; no root/security change was needed.
+- Direct sysfs battery and thermal nodes are permission denied. Current HAL temperatures from thermalservice are available. Battery voltage value `3` lacks a trustworthy conversion/interpretation, so no energy is derived. USB charging and wireless ADB remain active.
+- The initial `android-20261115-smoke` process was terminated during idle-gate preparation before any model request. Checking actual pinned Mac records caught an incorrect new validator assumption (`predicted_n = n-1`); this pinned server reports `predicted_n = n`. Fixed before proceeding, preserved initial sensor/gate/provenance snapshots, and use a new smoke session ID for changed harness bytes.
+- Phone screen is turned off for the benchmark. No personal app settings or security settings are changed; stock DVFS governor and CPU scheduling retained. CPU metrics and arrival timings include measurement/transport overhead and receive a separate paired overhead check.
+
+- A second smoke preparation used the strict idle gate and was stopped without a model request when periodic idle SoC spikes delayed stabilization; a new instrumentation-only smoke version passed a bounded observation gate without claiming strict stability. A restart briefly hit the intended nonblocking experiment lock while the previous process was shutting down; retried only after it exited. The lock prevented overlap.
+- WikiText retrieval initially hit Python's local CA-certificate configuration error. Switched to system curl with normal TLS verification and verified the immutable archive SHA-256 and extracted test-file hash. No certificate verification was disabled.
+- Power-source discovery succeeded but its generic rails and identical linear increments remain unvalidated. A `simpleperf stat` probe initially lacked a target; retry against a shell child process succeeded. Perfetto v34 schema rejects the newer voltage enum, and its SELinux context cannot read the config under shell-owned tmp; stdin plus a version-correct config resolved capture. None of these probe runs is a headline inference measurement.

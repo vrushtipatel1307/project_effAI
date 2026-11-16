@@ -1,0 +1,21 @@
+71a49b1b68f2b8b6ed10934ad80d824ff739229aaf9b524309dca1eaacd7d6ef  llama-server
+74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db  qwen2.5-0.5b-instruct-q4_k_m.gguf
+ca59ca7f13d0e15a8cfa77bd17e65d24f6844b554a7b6c12e07a5f89ff76844e  qwen2.5-0.5b-instruct-q8_0.gguf
+6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e  qwen2.5-1.5b-instruct-q4_k_m.gguf
+d7efb072e7724d25048a4fda0a3e10b04bdef5d06b1403a1c93bd9f1240a63c8  qwen2.5-1.5b-instruct-q8_0.gguf
+Current Battery Service state:
+  AC powered: false
+  USB powered: true
+  Wireless powered: false
+  Dock powered: false
+  Max charging current: 500000
+  Max charging voltage: 5000000
+  Charge counter: 300000
+  status: 2
+  health: 2
+  present: true
+  level: 6
+  scale: 100
+  voltage: 3
+  temperature: 285
+  technology: Li-ion

@@ -1,0 +1,3 @@
+c80a55ba73c0ef7154e7a53af3979052b144d7c2295ab4ca3884a678b66d4efa  llama-server-cpu-c80a55ba
+version: 0 (unknown)
+built with Android (11695104, +pgo, -bolt, +lto, -mlgo, based on r522817) clang version 18.0.1 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262) for x86_64-apple-darwin25.0.0

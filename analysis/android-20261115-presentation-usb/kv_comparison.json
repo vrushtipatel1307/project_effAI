@@ -1,0 +1,32 @@
+[
+  {
+    "model_id": "qwen15_q4",
+    "input_tokens": 2048,
+    "output_tokens": 128,
+    "cache_type": "f16",
+    "n": 1,
+    "source_run_ids": [
+      "presentation-qwen15_q4-i2048-o128-attempt1"
+    ],
+    "prefill_seconds_mean": 271.530985,
+    "prefill_seconds_sd": null,
+    "prefill_tokens_per_second_mean": 7.542417304603378,
+    "prefill_tokens_per_second_sd": null,
+    "decode_seconds_mean": 34.212021,
+    "decode_seconds_sd": null,
+    "decode_tokens_per_second_mean": 3.7413749979868185,
+    "decode_tokens_per_second_sd": null,
+    "request_wall_seconds_mean": 305.7781037920213,
+    "request_wall_seconds_sd": null,
+    "ttft_host_arrival_seconds_mean": 271.55892712500645,
+    "ttft_host_arrival_seconds_sd": null,
+    "itl_host_arrival_median_seconds_mean": 0.26916566700674593,
+    "itl_host_arrival_median_seconds_sd": null,
+    "sampled_peak_rss_mib_mean": 1232.1875,
+    "sampled_peak_rss_mib_sd": null,
+    "peak_soc_temperature_celsius_mean": 85.378,
+    "peak_soc_temperature_celsius_sd": null,
+    "mean_process_cpu_percent_one_core_100_mean": 393.8498591137949,
+    "mean_process_cpu_percent_one_core_100_sd": null
+  }
+]
